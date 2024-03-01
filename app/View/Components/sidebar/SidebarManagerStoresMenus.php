@@ -48,7 +48,56 @@ class SidebarManagerStoresMenus extends Component
                 'title' => 'quản lý hóa đơn',
                 'icon' => '',
                 'url' => '',
+                'children' => [
+                    [
+                        'title' => 'Tất Cả',
+                        'icon' => '',
+                        'url' => '',
+                    ],
+                    [
+                        'title' => 'đơn hàng đã hủy',
+                        'icon' => '',
+                        'url' => '',
+                    ]
+                ]
             ],
+            [
+                'title' => 'Thông kê',
+                'icon' => '',
+                'url' => '',
+                'id' => 1,
+                'children' => [
+                    [
+                        'title' => 'Tất cả',
+                        'icon' => '',
+                        'url' => '',
+                    ],
+                    [
+                        'title' => 'tạo sản phẩm',
+                        'icon' => '',
+                        'url' => '',
+                    ]
+                ]
+            ],
+            [
+                'title' => 'Danh thu',
+                'icon' => '',
+                'url' => '',
+                'id' => 1,
+                'children' => [
+                    [
+                        'title' => 'Tất cả',
+                        'icon' => '',
+                        'url' => '',
+                    ],
+                    [
+                        'title' => 'tạo sản phẩm',
+                        'icon' => '',
+                        'url' => '',
+                    ]
+                ]
+            ],
+
             [
                 'id' => 3,
                 'title' => 'Quản lý bài đăng',
@@ -80,6 +129,24 @@ class SidebarManagerStoresMenus extends Component
                     ],
                     [
                         'title' => 'tạo vorcher',
+                        'icon' => '',
+                        'url' => '',
+                    ]
+                ]
+            ],
+            [
+                'id' => 2,
+                'title' => 'thiết lập',
+                'icon' => '',
+                'url' => '',
+                'children' => [
+                    [
+                        'title' => 'Vị trí',
+                        'icon' => '',
+                        'url' => route('manager.locations'),
+                    ],
+                    [
+                        'title' => 'đơn hàng đã hủy',
                         'icon' => '',
                         'url' => '',
                     ]

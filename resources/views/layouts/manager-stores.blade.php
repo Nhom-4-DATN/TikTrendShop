@@ -9,23 +9,27 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         @vite(['resources/sass/app.scss', 'resources/css/manager-store/main.css', 'resources/js/app.js'])
     </head>
 
     <body>
         <div id="app">
             <x-header.header-manager-shop />
-            <div class="row">
-                <div class="col-2">
-                    <x-sidebar.sidebar-manager-stores-menus />
-                </div>
-                <div class="col-8 mt-4">
-                    @yield('content')
+            <div style="margin-top: 80px; ">
+                <div class="row">
+                    <div class="col-2 " style="height: 100vh;">
+                        <div class="position-fixed bg-white overflow-y-scroll" style="width: 280px; height:  100%;">
+                            <x-sidebar.sidebar-manager-stores-menus />
+                        </div>
+                    </div>
+                    <div class="col-8 mt-4">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
         </div>
     </body>
-    <script src=" {{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
     @stack('scripts')
 
 </html>

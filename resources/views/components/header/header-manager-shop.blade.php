@@ -1,4 +1,4 @@
-<header class="shadow-sm " style="height: 80px ">
+<header class="shadow-sm position-fixed top-0 start-0 end-0 z-1" style="height: 80px ">
     <nav class="navbar navbar-expand-lg bg-body-tertiary h-100">
         <div class="container-fluid ">
             <a class="navbar-brand fs-4" href="#">

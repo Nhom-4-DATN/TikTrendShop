@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <x-form.index :action="!empty($store['id']) ? route('manager.update.shop1', $store['slug']) : route('register.shop')" :class="'row g-3 needs-validation'" novalidate :method="!empty($store['id']) ? 'PUT' : 'POST'" :enctype="'multipart/form-data'">
+        <x-form.index :action="route('register.shop')" :class="'row g-3 needs-validation'" novalidate :method="'POST'" :enctype="'multipart/form-data'">
             <div class="col-3">
                 <div class="position-relative rounded-1 overflow-hidden">
-                    <x-form.input-image :src="asset('images/default/shop.jpeg')" />
+                    <x-form.input-image :src="asset('images/default/shop.jpeg')" :name="'thumb-image'" />
                     <p class="position-absolute bottom-0 left-0 right-0 text-center m-0 w-100 bg-dark bg-opacity-50 text-white py-1 ">sữa hình ảnh</p>
                 </div>
             </div>
@@ -26,9 +26,9 @@
                     </div>
                 @endif
                 <div class="mt-3">
-                    <x-form.textarea :balde="'mổ tả'" :maxlength="250" :name="'description'" :value="$store['description'] ?? ''" />
+                    <x-form.textarea :lable="'mô tả cửa hàng'" :maxlength="250" :name="'description'" :value="$store['description'] ?? ''" :style="'height:150px'" />
                 </div>
-                <button class="btn btn-primary mt-4" type="submit">lưu</button>
+                <button class="btn btn-primary mt-4" type="submit">đăng ký cửa hàng</button>
             </div>
         </x-form.index>
     </div>

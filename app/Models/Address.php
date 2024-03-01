@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stores extends Model
+class Address extends Model
 {
     protected $primaryKey = "id";
     protected $fillable = [
-        'id', 'thumb_url', 'slug', 'id_user', 'phone', 'name', 'address', 'status', 'follows', 'description', 'image_arr', 'created_at', 'updated_at'
+        'id', 'id_user', 'name', 'address', 'phone', 'is_default', 'return_address', 'delivery_address', 'created_at',
+        'updated_at'
     ];
     use HasFactory;
 }

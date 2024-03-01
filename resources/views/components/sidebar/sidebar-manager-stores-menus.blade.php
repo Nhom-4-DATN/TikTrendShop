@@ -1,5 +1,5 @@
 @vite(['resources/css/manager-store/sidebars.css'])
-<div class="flex-shrink-0 py-3 bg-white" style="width: 280px; height: calc(100vh - 93px);">
+<div class="flex-shrink-0 py-3  ">
     <ul class="list-unstyled ps-0">
         @foreach ($menus as $menu)
             <li class="mb-1 list-unstyled-item">

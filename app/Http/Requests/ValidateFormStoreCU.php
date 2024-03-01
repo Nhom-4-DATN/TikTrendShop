@@ -30,10 +30,11 @@ class ValidateFormStoreCU extends FormRequest
     public function rules(): array
     {
         $stores = Stores::where('slug', '=', $this->route('slug'))->first();
+        $idStore = !empty($stores->id)  ? ',' . $stores->id : '';
         $validate =  [
             'name_shop' => ['required', 'max:100'],
-            'phone_number' => ['required', 'max:13', 'unique:stores,phone,' . $stores->id ?? 0],
-            'slug' => ['unique:stores,slug,' . $stores->id ?? 0],
+            'phone_number' => ['required', 'max:13', 'unique:stores,phone' . $idStore],
+            'slug' => ['unique:stores,slug' . $idStore],
         ];
         if ($this->method() == 'POST') {
             $validate['address'] =  ['required', 'min:3'];

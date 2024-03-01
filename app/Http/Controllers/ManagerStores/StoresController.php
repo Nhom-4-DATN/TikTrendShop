@@ -6,13 +6,11 @@ use App\Http\Requests\ValidateFormStoreCU;
 use App\Models\Stores;
 use Exception;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
-use Faker\Extension\Extension;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
-use function Laravel\Prompts\error;
 
 class StoresController extends Controller
 {
@@ -33,16 +31,21 @@ class StoresController extends Controller
     function register(ValidateFormStoreCU $req)
     {
         try {
-
-            $this->storesModel->create([
+            if ($req->hasFile('thumb-image')) {
+                $file = $req->file('thumb-image');
+                $fileName = time() . '.' . $file->getClientOriginalExtension();
+                $thumb_url = $file->storeAs('uploads', $fileName, 'public');
+            }
+            $store =  $this->storesModel->create([
                 'name' => $req->name_shop,
                 'phone' => $req->phone_number,
                 'description' => $req->description,
                 'address' => join(",", $req->address),
                 'slug' => $req->slug,
+                'thumb_url' => $thumb_url,
                 'id_user' => Auth::id(),
             ]);
-            return redirect(route('manager.shop'));
+            return response()->json($store);
         } catch (Exception $e) {
             return back()->with(['error' => $e->getMessage()]);
         }
@@ -56,10 +59,20 @@ class StoresController extends Controller
     {
         try {
             $store = $this->storesModel->where('slug', $slug)->first();
+            if ($req->hasFile('thumb_image')) {
+                if (Storage::exists('public/' . $store->thumb_url)) {
+                    Storage::delete('public/' . $store->thumb_url);
+                }
+                $file = $req->file('thumb_image');
+                $fileName = time() . '.' . $file->getClientOriginalExtension();
+                $thumb_url =  $file->storeAs('uploads', $fileName, 'public');
+            }
             $store->update([
                 'name' => $req->name_shop,
                 'phone' => $req->phone_number,
                 'description' => $req->description,
+                'address' => $req->address ?? $store->address,
+                'thumb_url' => $thumb_url ?? $store->thumb_url
             ]);
             return response()->json($store);
         } catch (Exception $e) {

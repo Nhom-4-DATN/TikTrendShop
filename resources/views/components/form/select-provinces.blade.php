@@ -1,7 +1,7 @@
 <div class="provinces">
     <div class="row">
         <div class="col-12 mb-2">
-            <div class="form-labe">Địa nhận nhận hàng</div>
+            <div class="form-labe">Địa chỉ</div>
         </div>
         <div class="col-4">
             <x-form.select :name="'address[]'" class="show-select-provinces">
@@ -39,7 +39,6 @@
         <x-form.input :name="'address_detail'" :lable="'địa chỉ chi tiết'" maxlength="255" />
     </div>
 </div>
-
 @push('scripts')
     <script>
         const provinces_url = "{{ route('components.render-provinces') }}";

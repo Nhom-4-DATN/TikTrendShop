@@ -1,3 +1,4 @@
+@import "toastr";
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -18,4 +19,14 @@ html {
     opacity: 0.3;
     inset: 0;
     position: absolute;
+}
+.location {
+    display: flex;
+    padding: 20px 32px 20px 40px;
+    align-items: center;
+    justify-content: center;
+}
+.location .content {
+    flex: 1;
+    margin-left: 32px;
 }

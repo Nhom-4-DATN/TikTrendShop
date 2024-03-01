@@ -49,7 +49,6 @@
             </main>
         </div>
     </body>
-    <script src=" {{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
     @stack('scripts')
 
 </html>

@@ -7,7 +7,7 @@ $(document).ready(function() {
         const inputFileImage = $(this)[0];
         if(inputFileImage.files.length > 0){
             const filePath = URL.createObjectURL(inputFileImage.files[0]);
-            $(".show-image").html(`<img class="img-fluid  w-100" src="${filePath}" alt="img-thumbnail ">`)
+            $(".show-image").html(`<img class="img-fluid  w-100 h-100" src="${filePath}">`)
         }
     })
     $(document).on('change', '.show-select-provinces', function() {
