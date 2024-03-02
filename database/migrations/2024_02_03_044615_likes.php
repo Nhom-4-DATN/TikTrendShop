@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id_like');
             $table->unsignedInteger('id_product')->nullable(false);
             $table->unsignedInteger('id')->nullable(false);
-            $table->tinyInteger('is_like')->nullable(false)->default(0); //0 không like, 1 like
+            $table->boolean('is_like')->nullable(false)->default(true); //true like, false xóa
             $table->timestamps();
 
             $table->foreign('id_product')->references('id_product')->on('products');

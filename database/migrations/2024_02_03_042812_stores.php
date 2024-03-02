@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedInteger('id')->nullable(false);
             $table->string('name', 100)->nullable(false);
             $table->string('address', 255)->nullable(false);
-            $table->tinyInteger('status')->nullable(false)->default(1); //0 ẩn, 1 hiện
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->integer('follows')->nullable(false);
             $table->string('description', 255)->nullable();
             $table->text('image_arr')->nullable();

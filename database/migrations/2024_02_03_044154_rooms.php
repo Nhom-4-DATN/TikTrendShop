@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedInteger('id')->nullable(false);
             $table->string('name', 100)->nullable(false);
             $table->timestamps();
-
             $table->foreign('id')->references('id')->on('users');
             $table->foreign('id_store')->references('id_store')->on('stores');
         });

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('quantity')->nullable(false);
             $table->float('price')->nullable(false);
             $table->float('sale_price')->nullable();
-            $table->tinyInteger('status')->nullable(false)->default(1);
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->date('create_date')->nullable(false);
             $table->date('update_date')->nullable();
             $table->text('image')->nullable(false);

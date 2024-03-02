@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id_follow');
             $table->unsignedInteger('id_store')->nullable(false);
             $table->unsignedInteger('id')->nullable(false);
-            $table->tinyInteger('is_follow')->nullable(false)->default(0); //0 không follow, 1 follow, default 0
+            $table->boolean('is_follow')->nullable(false)->default(true); //true hiện, false xóa
             $table->timestamps();
 
             $table->foreign('id_store')->references('id_store')->on('stores');

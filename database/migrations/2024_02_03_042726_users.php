@@ -18,11 +18,12 @@ return new class extends Migration
             $table->string('email', 255)->nullable(false);
             $table->string('phone', 13)->nullable(false);
             $table->string('password', 100)->nullable(false);
-            $table->tinyInteger('very_email')->nullable(false)->default(0); //1 xác nhận, 0 chưa xác nhận
+            $table->timestamp('email_verified_at')->nullable();
             $table->tinyInteger('rank')->nullable(false)->default(0); //0 đồng, 1 bạc, 2 vàng, 3 kim cương
-            $table->tinyInteger('status')->nullable(false)->default(1); //0 ẩn, 1 hiện
+            $table->boolean('status')->default(false); // true hiện, false ẩn
             $table->tinyInteger('role')->nullable(false)->default(1); //0 admin, 1 user, 2 store
             $table->text('image')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
