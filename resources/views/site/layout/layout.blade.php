@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/emoji.css">
 
     <link rel="stylesheet" href="css/lightbox.css">
+    {{-- <link rel="stylesheet" href="css/product.css"> --}}
     <title>@yield('title')</title>
 
 </head>
@@ -40,11 +41,12 @@
                 <button class="nav-menu me-0 ms-2"></button>
             </div>
 
-            <form action="#" class="float-left header-search">
+            <form action="{{ route('search') }}" method="GET" class="float-left header-search">
                 <div class="form-group mb-0 icon-input">
                     <i class="feather-search font-sm text-grey-400"></i>
                     <input type="text" placeholder="Start typing to search.."
-                        class="bg-grey border-0 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg">
+                        class="bg-grey border-0 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg"
+                        name="search">
                 </div>
             </form>
             <a href="default.html" class="p-2 text-center ms-3 menu-icon center-menu-icon"><i
