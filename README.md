@@ -1,6 +1,6 @@
 # TikTrendShop
 
-Tập tành phát triển dự án sàn thương mại điện tử TikTrendShop
+Tập tành phát triển dự án sàn thương mại điện tử TikTrendShop by:  [huỳnh Ngọc Tài](https://www.facebook.com/HuynhNgocTaidz)
 
 ## Cài Đặt
 
