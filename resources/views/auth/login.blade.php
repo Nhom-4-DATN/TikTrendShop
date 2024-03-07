@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('site.layout.app')
+
+@section('title', 'Đăng nhập')
 
 @section('content')
     <div class="row">
