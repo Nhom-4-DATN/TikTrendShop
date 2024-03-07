@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name', 50)->nullable();
             $table->string('address', 255)->nullable();
             $table->string('phone', 13)->nullable();
-            $table->tinyInteger('is_default')->nullable(false)->default(0); //0 là không mặc định, 1 là mặc định
+            $table->boolean('is_default')->nullable(false)->default(true); //true mặc định, false không mặc định
             $table->timestamps();
 
             $table->foreign('id')->references('id')->on('users');

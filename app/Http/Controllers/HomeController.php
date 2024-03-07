@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,8 +22,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        return view('home');
+        $topProducts = Product::with('store.user')
+            ->orderBy('view_count', 'desc')
+            ->take(5)
+            ->get();
+        $products = Product::with('store.user')->get();
+        return view('home', ['topProducts' => $topProducts], ['products' => $products]);
     }
 }

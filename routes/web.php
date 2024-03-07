@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\InformationController;
+use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +19,17 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-Auth::routes();
+Route::auth();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/default-setting', function () {
+        return view('site/components/user/default');
+    })->name('default');
+    Route::get('/account-information',[UserController::class, 'account'])->name('account');
+    // up load file
+    // update account-information
+    Route::post('/update-profile', [InformationController::class, 'updateProfile'])->name('update-profile');
+    //password
+    Route::get('/password', [ChangePasswordController::class, 'password'])->name('password');
+    Route::post('/change-password', [ChangePasswordController::class, 'changePassword'])->name('change-password');
+});

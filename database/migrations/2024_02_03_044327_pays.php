@@ -15,6 +15,7 @@ return new class extends Migration
             $table->increments('id_pay');
             $table->unsignedInteger('id')->nullable(false);
             $table->string('name', 100)->nullable(false);
+            $table->string('bank', 255)->nullable(false);
             $table->string('number', 100)->nullable(false);
             $table->timestamps();
 

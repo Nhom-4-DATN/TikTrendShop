@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('id_categories_blog')->nullable(false);
             $table->string('title', 255)->nullable(false);
             $table->text('content')->nullable(false);
-            $table->tinyInteger('status')->default(1)->nullable(false); //0: ẩn, 1 hiện
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->text('image_arr')->nullable();
             $table->timestamps();
 

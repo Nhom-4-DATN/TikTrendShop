@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -51,6 +51,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'user_name' => ['required', 'string', 'min:6', 'max:15'],
             'full_name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'regex:/^\+?[0-9]+$/i', 'max:15', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:3', 'confirmed'],
         ], [
@@ -62,6 +63,12 @@ class RegisterController extends Controller
             'full_name.required' => 'Vui lòng nhập họ tên.',
             'full_name.string' => 'Họ tên phải là một chuỗi.',
             'full_name.max' => 'Họ tên không được vượt quá :max ký tự.',
+
+            'phone.required' => 'Vui lòng nhập số điện thoại.',
+            'phone.string' => 'Số điện thoại phải là một chuỗi.',
+            'phone.regex' => 'Số điện thoại không hợp lệ.',
+            'phone.max' => 'Số điện thoại không được vượt quá :max ký tự.',
+            'phone.unique' => 'Số điện thoại đã tồn tại.',
 
             'email.required' => 'Vui lòng nhập địa chỉ email.',
             'email.string' => 'Địa chỉ email phải là một chuỗi.',

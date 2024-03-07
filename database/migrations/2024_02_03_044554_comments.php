@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedInteger('id_product')->nullable(false);
             $table->unsignedInteger('id')->nullable(false);
             $table->text('content')->nullable(false);
-            $table->tinyInteger('status')->nullable(false)->default(1); //0 ẩn, 1 hiện
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->timestamps();
 
             $table->foreign('id_product')->references('id_product')->on('products');

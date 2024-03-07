@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedInteger('id_room')->nullable(false);
             $table->text('content')->nullable(false);
             $table->timestamps();
-
             $table->foreign('id')->references('id')->on('users');
             $table->foreign('id_store')->references('id_store')->on('stores');
             $table->foreign('id_room')->references('id_room')->on('rooms');

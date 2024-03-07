@@ -17,17 +17,17 @@ return new class extends Migration
             $table->integer('quantity')->nullable(false);
             $table->string('code', 100)->nullable(false);
             $table->float('discount_value')->nullable(false);
-            $table->tinyInteger('is_percent')->nullable(false); //0 là giảm theo %, 1 giảm theo số tiền
+            $table->boolean('is_percent')->nullable(false)->default(true); //true là phần trăm, false là số
             $table->date('start_date')->nullable(false);
             $table->date('end_date')->nullable(false);
             $table->text('appplicable_products')->nullable(false);
             $table->text('appplicable_categories')->nullable(false);
             $table->float('min_order_value')->nullable(false);
             $table->float('maximum_distance')->nullable(false);
-            $table->tinyInteger('user_rank')->nullable(false); //0 đồng, 1 bạc, 2 vàng, 3 kim cương, 4 toàn bộ
+            $table->tinyInteger('user_rank')->nullable(false)->default(0); //0 đồng, 1 bạc, 2 vàng, 3 kim cương, 4 toàn bộ
             $table->text('other_conditions')->nullable();
-            $table->tinyInteger('status')->nullable(false)->default(1); //0 ẩn, 1 hiện
-            $table->tinyInteger('is_stores')->nullable(false); //0 là mã của admin, 1 là mã của store
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
+            $table->boolean('is_stores')->nullable(false)->default(true); //true là của store, false là mã của admin
             $table->timestamps();
         });
     }

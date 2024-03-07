@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedInteger('id_order')->nullable(false);
             $table->integer('quantity')->nullable(false);
             $table->float('price')->nullable(false);
-
             $table->timestamps();
 
             $table->foreign('id_product_variation')->references('id_product_variation')->on('product_variations');

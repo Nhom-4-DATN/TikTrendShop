@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('date')->nullable(false);
             $table->string('note', 255)->nullable();
             $table->string('code', 255)->nullable(false);
-            $table->tinyInteger('status')->nullable(false)->default(0); //0 ẩn, 1 hiện
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->string('email', 100)->nullable(false);
             $table->string('phone', 13)->nullable(false);
             $table->string('full_name', 100)->nullable(false);

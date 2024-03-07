@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/feather.css">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/emoji.css">
-
-    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
+
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feather.css') }}">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/emoji.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
+    {{-- font awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 
@@ -202,7 +207,7 @@
             </div>
 
 
-            <a href="default-settings.html" class="p-0 ms-3 menu-icon"><img src="images/profile-4.png"
+            <a href="{{ route('default')}}" class="p-0 ms-3 menu-icon"><img src="images/profile-4.png"
                     alt="user" class="w40 mt--1"></a>
 
         </div>
@@ -215,7 +220,7 @@
                         <div class="nav-caption fw-600 font-xssss text-grey-500"><span>New </span>Feeds</div>
                         <ul class="mb-1 top-content">
                             <li class="logo d-none d-xl-block d-lg-block"></li>
-                            <li><a href="default.html" class="nav-content-bttn open-font"><i
+                            <li><a href="{{ route ('home') }}" class="nav-content-bttn open-font"><i
                                         class="feather-tv btn-round-md bg-blue-gradiant me-3"></i><span>Newsfeed</span></a>
                             </li>
                             <li><a href="default-badge.html" class="nav-content-bttn open-font"><i
@@ -517,6 +522,7 @@
 
     </div>
 
+    {{-- modal --}}
     <div class="modal bottom side fade" id="Modalstory" tabindex="-1" role="dialog" style=" overflow-y: auto;">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content border-0 bg-transparent">
@@ -525,6 +531,25 @@
                 <div class="modal-body p-0">
                     <div class="card w-100 border-0 rounded-3 overflow-hidden bg-gradiant-bottom bg-gradiant-top">
                         <div class="owl-carousel owl-theme dot-style3 story-slider owl-dot-nav nav-none">
+
+                            {{-- @foreach ($topProducts as $product)
+                                @php
+                                    $imageArray = json_decode('{' . $product['image_arr'] . '}', true);
+                                @endphp
+
+                                @if ($imageArray && is_array($imageArray['images']))
+                                    <div class="item">
+                                        @foreach ($imageArray['images'] as $image)
+                                            <img src="{{ $image }}" alt="Product Image">
+                                        @endforeach
+                                    </div>
+                                @else
+                                    <p>No images available for this product.</p>
+                                @endif
+                            @endforeach --}}
+
+
+
                             <div class="item"><img src="images/story-5.jpg" alt="image"></div>
                             <div class="item"><img src="images/story-6.jpg" alt="image"></div>
                             <div class="item"><img src="images/story-7.jpg" alt="image"></div>
@@ -585,9 +610,9 @@
         </div>
     </div>
 
-    <script src="js/plugin.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="{{ asset('js/plugin.js') }}"></script>
+    <script src="{{ asset('js/lightbox.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
 
 
 </body>
