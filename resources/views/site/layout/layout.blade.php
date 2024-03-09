@@ -45,11 +45,12 @@
                 <button class="nav-menu me-0 ms-2"></button>
             </div>
 
-            <form action="#" class="float-left header-search">
+            <form action="{{ route('search') }}" method="GET" class="float-left header-search">
                 <div class="form-group mb-0 icon-input">
                     <i class="feather-search font-sm text-grey-400"></i>
                     <input type="text" placeholder="Start typing to search.."
-                        class="bg-grey border-0 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg">
+                        class="bg-grey border-0 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg"
+                        name="search">
                 </div>
             </form>
             <a href="default.html" class="p-2 text-center ms-3 menu-icon center-menu-icon"><i
@@ -523,7 +524,7 @@
     </div>
 
     {{-- modal --}}
-    <div class="modal bottom side fade" id="Modalstory" tabindex="-1" role="dialog" style=" overflow-y: auto;">
+    {{-- <div class="modal bottom side fade" id="Modalstory" tabindex="-1" role="dialog" style=" overflow-y: auto;">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content border-0 bg-transparent">
                 <button type="button" class="close mt-0 position-absolute top--30 right--10" data-dismiss="modal"
@@ -532,7 +533,7 @@
                     <div class="card w-100 border-0 rounded-3 overflow-hidden bg-gradiant-bottom bg-gradiant-top">
                         <div class="owl-carousel owl-theme dot-style3 story-slider owl-dot-nav nav-none">
 
-                            {{-- @foreach ($topProducts as $product)
+                            @foreach ($topProducts as $product)
                                 @php
                                     $imageArray = json_decode('{' . $product['image_arr'] . '}', true);
                                 @endphp
@@ -546,7 +547,7 @@
                                 @else
                                     <p>No images available for this product.</p>
                                 @endif
-                            @endforeach --}}
+                            @endforeach
 
 
 
@@ -567,7 +568,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="modal-popup-chat">
         <div class="modal-popup-wrap bg-white p-0 shadow-lg rounded-3">

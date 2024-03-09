@@ -32,4 +32,8 @@ Route::middleware(['auth'])->group(function () {
     //password
     Route::get('/password', [ChangePasswordController::class, 'password'])->name('password');
     Route::post('/change-password', [ChangePasswordController::class, 'changePassword'])->name('change-password');
+    // products
+    Route::get('/products', [ProductsController::class, 'index'])->name('products');
+Route::get('/product-details/{id_product}-{name_product}', [ProductsController::class, 'productDetails'])->name('productDetails');
+Route::get('/search', [ProductsController::class, 'search'])->name('search');
 });
