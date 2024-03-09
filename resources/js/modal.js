@@ -1,6 +1,6 @@
 import $ from "jquery";
 import { Modal } from 'bootstrap';
-import toastr from 'toastr'
+import toastr from 'toastr';
 
 const modalLocation = new Modal('#modal-location');
 const modalMessage = new Modal(idModalMessage);
@@ -70,7 +70,6 @@ modalLocation._element.addEventListener('show.bs.modal', function (e) {
 
 modalMessage._element.addEventListener('show.bs.modal', function (e){
     const url = e.relatedTarget?.dataset.url;
-    console.log(url);
     if(url){
         document.querySelector('.btn-url').setAttribute('data-url' , url) ;
     }

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryBlogController;
 use App\Http\Controllers\ComponentController;
 use App\Http\Controllers\ManagerStores\StoresController;
 use Illuminate\Support\Facades\Route;
@@ -26,15 +28,32 @@ Route::prefix('address')->controller(AddressController::class)->group(function (
 
     Route::delete('delete/{id}', 'delete')->name('address.delete');
 });
+
 Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
     Route::controller(StoresController::class)->group(function () {
         Route::get('/', 'index')->name('manager.shop');
-        Route::get('/store/{slug}', 'detail')->name('manager.shop-detail');
-        Route::put('shop/update/{slug}', 'update')->name('manager.update.shop');
-        Route::get('shop/register', 'formCU')->name('register.shop');
-        Route::post('shop/register', 'register')->name('register.shop');
+        Route::prefix('shop')->group(function () {
+            Route::get('{slug}', 'detail')->name('manager.shop-detail');
+            Route::put('update/{slug}', 'update')->name('manager.update.shop');
+            Route::get('register', 'formCU')->name('register.shop');
+            Route::post('register', 'register')->name('register.shop');
+        });
     });
+
     Route::get('location', [AddressController::class, 'index'])->name('manager.locations');
+    Route::prefix('blog')->group(function () {
+        Route::get('/', [BlogController::class, 'index'])->name('manager.blog');
+        Route::get('/create', [BlogController::class, 'form'])->name('manager.create');
+        Route::post('/create', [BlogController::class, 'create'])->name('manager.create');
+        Route::prefix('category')->group(function () {
+            Route::get('/', [CategoryBlogController::class, 'index'])->name('manager.blog.category');
+            Route::get('/create', [CategoryBlogController::class, 'form'])->name('manager.blog.category.create');
+            Route::post('/create', [CategoryBlogController::class, 'create'])->name('manager.blog.category.create');
+            Route::get('/update/{slug}_{id}', [CategoryBlogController::class, 'form'])->name('manager.blog.category.update');
+            Route::put('/update/{slug}_{id}', [CategoryBlogController::class, 'edit'])->name('manager.blog.category.update');
+            Route::delete('/delete/{id}', [CategoryBlogController::class, 'delete'])->name('manager.blog.category.delete');
+        });
+    });
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

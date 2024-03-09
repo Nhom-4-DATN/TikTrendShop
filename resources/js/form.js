@@ -1,8 +1,31 @@
 import $ from "jquery";
+import toastr from 'toastr';
 
 
 
 $(document).ready(function() {
+    $('.form-submit').submit(function(e){
+        e.preventDefault();
+        const data = $(this).serialize();
+        if(data){
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data : data,
+                beforeSend : function(){
+                    $(this).find("button[type=submit]").attr('disabled',true)
+                },
+                success: function(res){
+                    toastr.success(res.message);
+                    document.querySelector('.form-submit').reset();
+                },
+                complete: function () {
+                    $(this).find("button[type=submit]").attr('disabled',false)
+                }
+            })
+        }
+    })
+
     $('.upload-image').change(function() {
         const inputFileImage = $(this)[0];
         if(inputFileImage.files.length > 0){
@@ -10,6 +33,7 @@ $(document).ready(function() {
             $(".show-image").html(`<img class="img-fluid  w-100 h-100" src="${filePath}">`)
         }
     })
+
     $(document).on('change', '.show-select-provinces', function() {
         const id = $(this).find('option:selected').data('id')
         if (id) {

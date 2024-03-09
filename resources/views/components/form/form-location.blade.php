@@ -6,7 +6,7 @@
         <x-form.input :name="'phone_number'" :lable="'số điện thoại'" :value="$data->phone ?? old('phone')" />
     </div>
     <div class="mt-3">
-        <x-form.select-provinces />
+        <x-form.select-provinces :data="$data->address ?? ''" />
     </div>
     <div class="form-check mt-4">
         <input class="form-check-input" type="checkbox" value="1" id="is_default" {{ !App\Models\Address::count() > 0 || optional($data)->is_default == 1 ? 'checked ' : '' }} name="is_default">
@@ -27,6 +27,3 @@
         </label>
     </div>
 </x-form.index>
-@push('scripts')
-    @vite(['resources/js/form.js'])
-@endpush

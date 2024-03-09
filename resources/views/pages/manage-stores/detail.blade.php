@@ -46,8 +46,12 @@
                                         <x-form.input :id="'font_number'" :name="'phone_number'" :lable="'Số điện thoại'" :value="$store->phone" />
                                     </div>
                                     <div class="mt-4 ">
+                                        <x-form.select-provinces :data="$store->address ?? ''" />
+                                    </div>
+                                    <div class="mt-4 ">
                                         <x-form.textarea :id="'name-shop'" :name="'description'" :lable="'Mô tả cửa hàng'" :style="'height:150px'" :value="$store->description" />
                                     </div>
+
                                     <button type="submit" class="btn btn-primary mt-3">Lưu Thông tin</button>
                                 </div>t
                             </div>
@@ -55,7 +59,6 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="nav-payment-tab" tabindex="0">
-
                 </div>
             </div>
         </div>

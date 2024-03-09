@@ -7,7 +7,10 @@
             <x-form.select :name="'address[]'" class="show-select-provinces">
                 <option value="" selected> Tỉnh/TP </option>
                 @foreach ($provinces as $province)
-                    <option value="{{ $province['name'] ?? '' }}" data-id="{{ $province['id'] }}" {{ !empty($_GET['id_provinces']) && $_GET['id_provinces'] == $province['id'] ? 'selected' : '' }}>{{ $province['name'] }}</option>
+                    @php
+                        $provinceSelecte = (!empty($_GET['id_provinces']) && $_GET['id_provinces'] == $province['id'] ? 'selected' : '') || (!empty($addressActive['province']) && $addressActive['province']['id'] == $province['id']) ? 'selected' : '';
+                    @endphp
+                    <option value="{{ $province['name'] ?? '' }}" data-id="{{ $province['id'] }}" {{ $provinceSelecte }}>{{ $province['name'] }}</option>
                 @endforeach
             </x-form.select>
         </div>
@@ -15,7 +18,10 @@
             <x-form.select :name="'address[]'" :disabled="count($districts) > 0 ? false : true" class="show-select-district">
                 <option value="" selected>Quận/Huyện</option>
                 @foreach ($districts as $district)
-                    <option value="{{ $district['name'] ?? '' }}" data-id="{{ $district['id'] }}" {{ !empty($_GET['id_district']) && $_GET['id_district'] == $district['id'] ? 'selected' : '' }}>{{ $district['name'] }}</option>
+                    @php
+                        $activeDistrict = (!empty($_GET['id_district']) && $_GET['id_district'] == $district['id']) || (!empty($addressActive['district']) && $addressActive['district']['id'] == $district['id']) ? 'selected' : '';
+                    @endphp
+                    <option value="{{ $district['name'] ?? '' }}" data-id="{{ $district['id'] }}" {{ $activeDistrict }}>{{ $district['name'] }}</option>
                 @endforeach
             </x-form.select>
         </div>
@@ -23,7 +29,10 @@
             <x-form.select :name="'address[]'" :disabled="count($wards) > 0 ? false : true" class="show-select-wards">
                 <option value="" selected>Phường/Xã</option>
                 @foreach ($wards as $ward)
-                    <option value="{{ $ward['name'] ?? '' }}" data-id="{{ $ward['id'] }}">{{ $ward['name'] }}</option>
+                    @php
+                        $wardSelecte = !empty($addressActive['id']) && $addressActive['id'] == $ward['id'] ? 'selected' : '';
+                    @endphp
+                    <option value="{{ $ward['name'] ?? '' }}" data-id="{{ $ward['id'] }}" {{ $wardSelecte }}>{{ $ward['name'] }}</option>
                 @endforeach
             </x-form.select>
         </div>
@@ -36,11 +45,6 @@
         </div>
     </div>
     <div class="mt-3">
-        <x-form.input :name="'address_detail'" :lable="'địa chỉ chi tiết'" maxlength="255" />
+        <x-form.input :name="'address_detail'" :lable="'địa chỉ chi tiết'" maxlength="255" :value="$addressActive['addressDetail'] ?? ''" />
     </div>
 </div>
-@push('scripts')
-    <script>
-        const provinces_url = "{{ route('components.render-provinces') }}";
-    </script>
-@endpush

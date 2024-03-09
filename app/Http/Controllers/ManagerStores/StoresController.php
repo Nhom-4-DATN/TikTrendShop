@@ -71,10 +71,10 @@ class StoresController extends Controller
                 'name' => $req->name_shop,
                 'phone' => $req->phone_number,
                 'description' => $req->description,
-                'address' => $req->address ?? $store->address,
+                'address' =>  join(', ', $req->address) . ',' . $req->address_detail ?? $store->address,
                 'thumb_url' => $thumb_url ?? $store->thumb_url
             ]);
-            return response()->json($store);
+            return back()->with(['success' => 'cập nhập thành công']);
         } catch (Exception $e) {
             echo $e->getMessage();
             die;
