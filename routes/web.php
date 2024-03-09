@@ -30,17 +30,19 @@ Route::prefix('address')->controller(AddressController::class)->group(function (
 });
 
 Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
+
     Route::controller(StoresController::class)->group(function () {
         Route::get('/', 'index')->name('manager.shop');
         Route::prefix('shop')->group(function () {
-            Route::get('{slug}', 'detail')->name('manager.shop-detail');
-            Route::put('update/{slug}', 'update')->name('manager.update.shop');
             Route::get('register', 'formCU')->name('register.shop');
             Route::post('register', 'register')->name('register.shop');
+            Route::get('{slug}', 'detail')->name('manager.shop-detail');
+            Route::put('update/{slug}', 'update')->name('manager.update.shop');
         });
     });
 
     Route::get('location', [AddressController::class, 'index'])->name('manager.locations');
+
     Route::prefix('blog')->group(function () {
         Route::get('/', [BlogController::class, 'index'])->name('manager.blog');
         Route::get('/create', [BlogController::class, 'form'])->name('manager.create');
