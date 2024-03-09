@@ -15,7 +15,7 @@ class ProductsController extends Controller
     }
 
     public function productDetails($id_product){
-        $product = Products::where('id_product', $id_product)->get();
+        $product = Products::where('id_product', $id_product)->first();
         $product_variations = ProductVariations::all();
         return view('site/components/user/product_details', compact('product', 'product_variations'));
     }

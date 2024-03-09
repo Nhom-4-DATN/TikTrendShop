@@ -1,0 +1,19 @@
+.detail {
+    height: 8vh;
+    width: 8vh;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+.detail:hover {
+    cursor: pointer;
+}
+
+.detail>img {
+    height: 8vh;
+    width: 8vh;
+}
+
+.clicked {
+    background-color: red;
+}

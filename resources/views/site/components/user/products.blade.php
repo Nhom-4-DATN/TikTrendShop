@@ -35,8 +35,9 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card w-100 border-0 mt-4">
                             <div class="card-image w-100 p-0 text-center bg-greylight rounded-3 mb-2">
-                                <a href="{{ route('product-details', $product->id_product) }}"><img src="images/pp-9.png"
-                                        alt="product-image" class="w-100 mt-0 mb-0 p-5"></a>
+                                <a
+                                    href="{{ route('productDetails', ['id_product' => $product->id_product, 'name_product' => urlencode($product->name)]) }}"><img
+                                        src="../images/pp-9.png" alt="product-image" class="w-100 mt-0 mb-0 p-5"></a>
                             </div>
                             <div class="card-body w-100 p-0 text-center">
                                 <h2 class="mt-2 mb-1"><a href="single-product.html"

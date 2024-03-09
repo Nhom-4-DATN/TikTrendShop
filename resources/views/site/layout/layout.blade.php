@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/feather.css">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/emoji.css">
-
-    <link rel="stylesheet" href="css/lightbox.css">
-    {{-- <link rel="stylesheet" href="css/product.css"> --}}
     <title>@yield('title')</title>
 
+
+    <link rel="stylesheet" href="{{ asset('css/themes/themify-icons-1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feather-1.css') }}">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-1.png') }}">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('css/style-1.css') }}">
 </head>
 
 <body class="color-theme-blue mont-font">

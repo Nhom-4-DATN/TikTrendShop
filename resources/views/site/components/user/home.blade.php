@@ -55,7 +55,7 @@
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-11.png" alt="image"
+                                        <img src="../images/user-11.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -72,7 +72,7 @@
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-12.png" alt="image"
+                                        <img src="../images/user-12.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -86,12 +86,12 @@
                         <div data-bs-toggle="modal" data-bs-target="#Modalstory"
                             class="card w125 h200 d-block border-0 shadow-xss rounded-xxxl bg-gradiant-bottom overflow-hidden cursor-pointer mb-3 mt-3">
                             <video autoplay loop class="float-right w-100">
-                                <source src="images/s-4.mp4" type="video/mp4">
+                                <source src="../images/s-4.mp4" type="video/mp4">
                             </video>
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-9.png" alt="image"
+                                        <img src="../images/user-9.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -105,12 +105,12 @@
                         <div data-bs-toggle="modal" data-bs-target="#Modalstory"
                             class="card w125 h200 d-block border-0 shadow-xss rounded-xxxl bg-gradiant-bottom overflow-hidden cursor-pointer mb-3 mt-3 me-1">
                             <video autoplay loop class="float-right w-100">
-                                <source src="images/s-3.mp4" type="video/mp4">
+                                <source src="../images/s-3.mp4" type="video/mp4">
                             </video>
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-4.png" alt="image"
+                                        <img src="../images/user-4.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -127,7 +127,7 @@
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-3.png" alt="image"
+                                        <img src="../images/user-3.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -144,7 +144,7 @@
                             <div class="card-body d-block p-3 w-100 position-absolute bottom-0 text-center">
                                 <a href="#">
                                     <figure class="avatar ms-auto me-auto mb-0 position-relative w50 z-index-1">
-                                        <img src="images/user-2.png" alt="image"
+                                        <img src="../images/user-2.png" alt="image"
                                             class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                     </figure>
                                     <div class="clearfix"></div>
@@ -166,7 +166,7 @@
                         Post</a>
                 </div>
                 <div class="card-body p-0 mt-3 position-relative">
-                    <figure class="avatar position-absolute ms-2 mt-1 top-5"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar position-absolute ms-2 mt-1 top-5"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w30">
                     </figure>
                     <textarea name="message"
@@ -223,7 +223,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-3">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3"><img src="images/user-7.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-7.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Surfiya Zakir <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">3 hour ago</span>
@@ -270,11 +270,11 @@
                 <div class="card-body d-block p-0">
                     <div class="row ps-2 pe-2">
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-10.jpg" data-lightbox="roadtrip"><img
-                                    src="images/t-10.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-10.jpg" class="rounded-3 w-100" alt="image"></a></div>
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-11.jpg" data-lightbox="roadtrip"><img
-                                    src="images/t-11.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-11.jpg" class="rounded-3 w-100" alt="image"></a></div>
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-12.jpg" data-lightbox="roadtrip"
-                                class="position-relative d-block"><img src="images/t-12.jpg" class="rounded-3 w-100"
+                                class="position-relative d-block"><img src="../images/t-12.jpg" class="rounded-3 w-100"
                                     alt="image"><span
                                     class="img-count font-sm text-white ls-3 fw-600"><b>+2</b></span></a>
                         </div>
@@ -350,7 +350,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-0">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3 m-0"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3 m-0"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Goria Coast <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">2 hour ago</span>
@@ -471,7 +471,7 @@
                                 style="background-image: url(images/u-bg.jpg);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-11.png" alt="image"
+                                    <img src="../images/user-11.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -491,7 +491,7 @@
                                 style="background-image: url(images/s-2.jpg);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-2.png" alt="image"
+                                    <img src="../images/user-2.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -511,7 +511,7 @@
                                 style="background-image: url(images/s-6.jpg);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-3.png" alt="image"
+                                    <img src="../images/user-3.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -531,7 +531,7 @@
                                 style="background-image: url(images/bb-16.png);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-4.png" alt="image"
+                                    <img src="../images/user-4.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -551,7 +551,7 @@
                                 style="background-image: url(images/e-4.jpg);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-7.png" alt="image"
+                                    <img src="../images/user-7.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -571,7 +571,7 @@
                                 style="background-image: url(images/coming-soon.png);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-5.png" alt="image"
+                                    <img src="../images/user-5.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -591,7 +591,7 @@
                                 style="background-image: url(images/bb-9.jpg);"></div>
                             <div class="card-body d-block w-100 ps-4 pe-4 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 mt--6 position-relative w75 z-index-1">
-                                    <img src="images/user-6.png" alt="image"
+                                    <img src="../images/user-6.png" alt="image"
                                         class="float-right p-1 bg-white rounded-circle w-100">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -610,7 +610,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-3">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">2 hour ago</span>
@@ -651,7 +651,7 @@
                 <div class="card-body p-0 mb-3 rounded-3 overflow-hidden">
                     <a href="default-video.html" class="video-btn">
                         <video autoplay loop class="float-right w-100">
-                            <source src="images/v-2.mp4" type="video/mp4">
+                            <source src="../images/v-2.mp4" type="video/mp4">
                         </video>
                     </a>
                 </div>
@@ -692,7 +692,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-0">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">2 hour ago</span>
@@ -711,17 +711,17 @@
                 <div class="card-body d-block p-0 mb-3">
                     <div class="row ps-2 pe-2">
                         <div class="col-xs-6 col-sm-6 p-1"><a href="images/t-36.jpg" data-lightbox="roadtri"><img
-                                    src="images/t-21.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-21.jpg" class="rounded-3 w-100" alt="image"></a></div>
                         <div class="col-xs-6 col-sm-6 p-1"><a href="images/t-32.jpg" data-lightbox="roadtri"><img
-                                    src="images/t-22.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-22.jpg" class="rounded-3 w-100" alt="image"></a></div>
                     </div>
                     <div class="row ps-2 pe-2">
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-33.jpg" data-lightbox="roadtri"><img
-                                    src="images/t-23.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-23.jpg" class="rounded-3 w-100" alt="image"></a></div>
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-34.jpg" data-lightbox="roadtri"><img
-                                    src="images/t-24.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-24.jpg" class="rounded-3 w-100" alt="image"></a></div>
                         <div class="col-xs-4 col-sm-4 p-1"><a href="images/t-35.jpg" data-lightbox="roadtri"
-                                class="position-relative d-block"><img src="images/t-25.jpg" class="rounded-3 w-100"
+                                class="position-relative d-block"><img src="../images/t-25.jpg" class="rounded-3 w-100"
                                     alt="image"><span
                                     class="img-count font-sm text-white ls-3 fw-600"><b>+2</b></span></a>
                         </div>
@@ -762,7 +762,7 @@
                         <div class="card w150 d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3 me-2 mt-3">
                             <div class="card-body d-block w-100 ps-3 pe-3 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 position-relative w65 z-index-1">
-                                    <img src="images/user-11.png" alt="image"
+                                    <img src="../images/user-11.png" alt="image"
                                         class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -777,7 +777,7 @@
                         <div class="card w150 d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3 me-2 mt-3">
                             <div class="card-body d-block w-100 ps-3 pe-3 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 position-relative w65 z-index-1">
-                                    <img src="images/user-9.png" alt="image"
+                                    <img src="../images/user-9.png" alt="image"
                                         class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -792,7 +792,7 @@
                         <div class="card w150 d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3 me-2 mt-3">
                             <div class="card-body d-block w-100 ps-3 pe-3 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 position-relative w65 z-index-1">
-                                    <img src="images/user-12.png" alt="image"
+                                    <img src="../images/user-12.png" alt="image"
                                         class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -807,7 +807,7 @@
                         <div class="card w150 d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3 me-2 mt-3">
                             <div class="card-body d-block w-100 ps-3 pe-3 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 position-relative w65 z-index-1">
-                                    <img src="images/user-8.png" alt="image"
+                                    <img src="../images/user-8.png" alt="image"
                                         class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -822,7 +822,7 @@
                         <div class="card w150 d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3 me-2 mt-3">
                             <div class="card-body d-block w-100 ps-3 pe-3 pb-4 text-center">
                                 <figure class="avatar ms-auto me-auto mb-0 position-relative w65 z-index-1">
-                                    <img src="images/user-7.png" alt="image"
+                                    <img src="../images/user-7.png" alt="image"
                                         class="float-right p-0 bg-white rounded-circle w-100 shadow-xss">
                                 </figure>
                                 <div class="clearfix"></div>
@@ -840,7 +840,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-3">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">2 hour ago</span>
@@ -851,7 +851,7 @@
                 <div class="card-body p-0 mb-3 rounded-3 overflow-hidden">
                     <a href="default-video.html" class="video-btn">
                         <video autoplay loop class="float-right w-100">
-                            <source src="images/v-1.mp4" type="video/mp4">
+                            <source src="../images/v-1.mp4" type="video/mp4">
                         </video>
                     </a>
                 </div>
@@ -892,7 +892,7 @@
 
             <div class="card w-100 shadow-xss rounded-xxl border-0 p-4 mb-0">
                 <div class="card-body p-0 d-flex">
-                    <figure class="avatar me-3"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">2 hour ago</span>
@@ -909,7 +909,7 @@
                 <div class="card-body d-block p-0 mb-3">
                     <div class="row ps-2 pe-2">
                         <div class="col-sm-12 p-1"><a href="images/t-30.jpg" data-lightbox="roadtr"><img
-                                    src="images/t-31.jpg" class="rounded-3 w-100" alt="image"></a></div>
+                                    src="../images/t-31.jpg" class="rounded-3 w-100" alt="image"></a></div>
                     </div>
                 </div>
                 <div class="card-body d-flex p-0">
@@ -960,7 +960,7 @@
                         all</a>
                 </div>
                 <div class="card-body d-flex pt-4 ps-4 pe-4 pb-0 border-top-xs bor-0">
-                    <figure class="avatar me-3"><img src="images/user-7.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-7.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -974,7 +974,7 @@
                 </div>
 
                 <div class="card-body d-flex pt-0 ps-4 pe-4 pb-0">
-                    <figure class="avatar me-3"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Mohannad Zitoun <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -988,7 +988,7 @@
                 </div>
 
                 <div class="card-body d-flex pt-0 ps-4 pe-4 pb-0">
-                    <figure class="avatar me-3"><img src="images/user-12.png" alt="image"
+                    <figure class="avatar me-3"><img src="../images/user-12.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-1">Mohannad Zitoun <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -1009,7 +1009,7 @@
                         all</a>
                 </div>
                 <div class="card-body bg-transparent-card d-flex p-3 bg-greylight ms-3 me-3 rounded-3">
-                    <figure class="avatar me-2 mb-0"><img src="images/user-7.png" alt="image"
+                    <figure class="avatar me-2 mb-0"><img src="../images/user-7.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-2">Anthony Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -1019,7 +1019,7 @@
                 </div>
                 <div class="card-body bg-transparent-card d-flex p-3 bg-greylight m-3 rounded-3"
                     style="margin-bottom: 0 !important;">
-                    <figure class="avatar me-2 mb-0"><img src="images/user-8.png" alt="image"
+                    <figure class="avatar me-2 mb-0"><img src="../images/user-8.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-2"> David Agfree <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -1027,7 +1027,7 @@
                     <a href="#" class="btn-round-sm bg-white text-grey-900 feather-plus font-xss ms-auto mt-2"></a>
                 </div>
                 <div class="card-body bg-transparent-card d-flex p-3 bg-greylight m-3 rounded-3">
-                    <figure class="avatar me-2 mb-0"><img src="images/user-12.png" alt="image"
+                    <figure class="avatar me-2 mb-0"><img src="../images/user-12.png" alt="image"
                             class="shadow-sm rounded-circle w45"></figure>
                     <h4 class="fw-700 text-grey-900 font-xssss mt-2">Hugury Daugloi <span
                             class="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">12 mutual
@@ -1044,17 +1044,17 @@
                         all</a>
                 </div>
                 <div class="card-body d-flex pt-4 ps-4 pe-4 pb-0 overflow-hidden border-top-xs bor-0">
-                    <img src="images/e-2.jpg" alt="img" class="img-fluid rounded-xxl mb-2">
+                    <img src="../images/e-2.jpg" alt="img" class="img-fluid rounded-xxl mb-2">
                 </div>
                 <div class="card-body dd-block pt-0 ps-4 pe-4 pb-4">
                     <ul class="memberlist mt-1 mb-2 ms-0 d-block">
-                        <li class="w20"><a href="#"><img src="images/user-6.png" alt="user"
+                        <li class="w20"><a href="#"><img src="../images/user-6.png" alt="user"
                                     class="w35 d-inline-block" style="opacity: 1;"></a></li>
-                        <li class="w20"><a href="#"><img src="images/user-7.png" alt="user"
+                        <li class="w20"><a href="#"><img src="../images/user-7.png" alt="user"
                                     class="w35 d-inline-block" style="opacity: 1;"></a></li>
-                        <li class="w20"><a href="#"><img src="images/user-8.png" alt="user"
+                        <li class="w20"><a href="#"><img src="../images/user-8.png" alt="user"
                                     class="w35 d-inline-block" style="opacity: 1;"></a></li>
-                        <li class="w20"><a href="#"><img src="images/user-3.png" alt="user"
+                        <li class="w20"><a href="#"><img src="../images/user-3.png" alt="user"
                                     class="w35 d-inline-block" style="opacity: 1;"></a></li>
                         <li class="last-member"><a href="#"
                                 class="bg-greylight fw-600 text-grey-500 font-xssss w35 ls-3 text-center"
@@ -1075,7 +1075,7 @@
                         all</a>
                 </div>
                 <div class="card-body d-flex pt-4 ps-4 pe-4 pb-0 overflow-hidden border-top-xs bor-0">
-                    <img src="images/g-2.jpg" alt="img" class="img-fluid rounded-xxl mb-2">
+                    <img src="../images/g-2.jpg" alt="img" class="img-fluid rounded-xxl mb-2">
                 </div>
                 <div class="card-body d-flex align-items-center pt-0 ps-4 pe-4 pb-4">
                     <a href="#"
@@ -1084,7 +1084,7 @@
                 </div>
 
                 <div class="card-body d-flex pt-0 ps-4 pe-4 pb-0 overflow-hidden">
-                    <img src="images/g-3.jpg" alt="img" class="img-fluid rounded-xxl mb-2 bg-lightblue">
+                    <img src="../images/g-3.jpg" alt="img" class="img-fluid rounded-xxl mb-2 bg-lightblue">
                 </div>
                 <div class="card-body d-flex align-items-center pt-0 ps-4 pe-4 pb-4">
                     <a href="#"
