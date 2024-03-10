@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
-    protected $table = 'categories_blog';
+    protected $table = 'blogs';
     protected $primaryKey = "id";
     protected $fillable = [
         'id_store',
@@ -18,6 +18,6 @@ class Blog extends Model
         'status',
         'image_arr',
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 }

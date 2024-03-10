@@ -1,6 +1,44 @@
 # Release Notes for 10.x
 
-## [Unreleased](https://github.com/laravel/framework/compare/v10.44.0...10.x)
+## [Unreleased](https://github.com/laravel/framework/compare/v10.46.0...10.x)
+
+## [v10.46.0](https://github.com/laravel/framework/compare/v10.45.1...v10.46.0) - 2024-02-27
+
+* [10.x] Ensure lazy-loading for trashed morphTo relations works by [@nuernbergerA](https://github.com/nuernbergerA) in https://github.com/laravel/framework/pull/50176
+* [10.x] Arr::select not working when $keys is a string by [@Sicklou](https://github.com/Sicklou) in https://github.com/laravel/framework/pull/50169
+* [10.x] Added passing loaded relationship to value callback by [@dkulyk](https://github.com/dkulyk) in https://github.com/laravel/framework/pull/50167
+* [10.x] Fix optional charset and collation when creating database by [@GrahamCampbell](https://github.com/GrahamCampbell) in https://github.com/laravel/framework/pull/50168
+* [10.x] update doc block in PendingProcess.php by [@saMahmoudzadeh](https://github.com/saMahmoudzadeh) in https://github.com/laravel/framework/pull/50198
+* [10.x] Fix Accepting nullable Parameters, updated doc block, and null pointer exception handling in batchable trait by [@saMahmoudzadeh](https://github.com/saMahmoudzadeh) in https://github.com/laravel/framework/pull/50209
+* Make GuardsAttributes fillable property DocBlock more specific by [@liamduckett](https://github.com/liamduckett) in https://github.com/laravel/framework/pull/50229
+* [10.x] Add only and except methods to Enum validation rule by [@Anton5360](https://github.com/Anton5360) in https://github.com/laravel/framework/pull/50226
+* [10.x] Fixes on nesting operations performed while applying scopes. by [@Guilhem-DELAITRE](https://github.com/Guilhem-DELAITRE) in https://github.com/laravel/framework/pull/50207
+* [10.x] Custom RateLimiter increase by [@khepin](https://github.com/khepin) in https://github.com/laravel/framework/pull/50197
+* [10.x] Add Lateral Join to Query Builder by [@Bakke](https://github.com/Bakke) in https://github.com/laravel/framework/pull/50050
+* [10.x] Update return type by [@AmirRezaM75](https://github.com/AmirRezaM75) in https://github.com/laravel/framework/pull/50252
+* [10.x] Fix dockblock by [@michaelnabil230](https://github.com/michaelnabil230) in https://github.com/laravel/framework/pull/50259
+* [10.x] Add `Conditionable` in enum rule by [@michaelnabil230](https://github.com/michaelnabil230) in https://github.com/laravel/framework/pull/50257
+* [10.x] Update Facade::$app to nullable by [@villfa](https://github.com/villfa) in https://github.com/laravel/framework/pull/50260
+* [10.x] Truncate sqlite table name with prefix by [@kitloong](https://github.com/kitloong) in https://github.com/laravel/framework/pull/50251
+* Correction comment for Str::orderedUuid() - https://github.com/larave… by [@wq9578](https://github.com/wq9578) in https://github.com/laravel/framework/pull/50268
+
+## [v10.45.1](https://github.com/laravel/framework/compare/v10.45.0...v10.45.1) - 2024-02-21
+
+* Fix typehint for ResetPassword::toMailUsing() by [@KKSzymanowski](https://github.com/KKSzymanowski) in https://github.com/laravel/framework/pull/50163
+* [10.x] Fix Process::fake() never matching multi-line commands by [@SjorsO](https://github.com/SjorsO) in https://github.com/laravel/framework/pull/50164
+
+## [v10.45.0](https://github.com/laravel/framework/compare/v10.44.0...v10.45.0) - 2024-02-20
+
+* [10.x] Update `Stringable` phpdoc by [@milwad-dev](https://github.com/milwad-dev) in https://github.com/laravel/framework/pull/50075
+* [10.x] Allow `Collection::select()` to work on `ArrayAccess` by [@axlon](https://github.com/axlon) in https://github.com/laravel/framework/pull/50072
+* [10.x] Add `before` to the `PendingBatch` by [@xiCO2k](https://github.com/xiCO2k) in https://github.com/laravel/framework/pull/50058
+* [10.x] Adjust rules call sequence by [@driesvints](https://github.com/driesvints) in https://github.com/laravel/framework/pull/50084
+* [10.x] Fixes `Illuminate\Support\Str::fromBase64()` return type by [@SamAsEnd](https://github.com/SamAsEnd) in https://github.com/laravel/framework/pull/50108
+* [10.x] Actually fix fromBase64 return type by [@GrahamCampbell](https://github.com/GrahamCampbell) in https://github.com/laravel/framework/pull/50113
+* [10.x] Fix warning and deprecation for Str::api by [@driesvints](https://github.com/driesvints) in https://github.com/laravel/framework/pull/50114
+* [10.x] Mark model instanse as not exists on deleting MorphPivot relation. by [@dkulyk](https://github.com/dkulyk) in https://github.com/laravel/framework/pull/50135
+* [10.x] Adds Tappable and Conditionable to Relation class by [@DarkGhostHunter](https://github.com/DarkGhostHunter) in https://github.com/laravel/framework/pull/50124
+* [10.x] Added getQualifiedMorphTypeName to MorphToMany by [@dkulyk](https://github.com/dkulyk) in https://github.com/laravel/framework/pull/50153
 
 ## [v10.44.0](https://github.com/laravel/framework/compare/v10.43.0...v10.44.0) - 2024-02-13
 

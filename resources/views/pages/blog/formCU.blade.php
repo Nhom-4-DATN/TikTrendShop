@@ -11,7 +11,7 @@
                         <x-form.input id="title" name="title" lable="tên bài viết" />
                     </div>
                     <div class="mt-4">
-                        <x-form.select lable="danh mục cha" id="name" name="parent_id">
+                        <x-form.select lable="danh mục cha" id="name" name="category_id">
                             <option value="">Cấp lớn nhất</option>
                             @foreach ($categoryBlogList as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>

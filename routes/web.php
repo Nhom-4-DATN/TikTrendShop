@@ -44,7 +44,7 @@ Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
     Route::get('location', [AddressController::class, 'index'])->name('manager.locations');
 
     Route::prefix('blog')->group(function () {
-        Route::get('/', [BlogController::class, 'index'])->name('manager.blog');
+        Route::get('/', [BlogController::class, 'manageBlog'])->name('manager.blog');
         Route::get('/create', [BlogController::class, 'form'])->name('manager.create');
         Route::post('/create', [BlogController::class, 'create'])->name('manager.create');
         Route::prefix('category')->group(function () {
