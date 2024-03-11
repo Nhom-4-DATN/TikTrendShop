@@ -51,9 +51,9 @@
                     </div>
                     <p class="review-link font-xssss fw-500 text-grey-500 lh-3"> 2 customer review</p>
                     <div class="clearfix"></div>
-                    <p class="font-xsss fw-400 text-grey-500 lh-30 pe-5 mt-3 me-5">ultrices justo eget,
+                    {{-- <p class="font-xsss fw-400 text-grey-500 lh-30 pe-5 mt-3 me-5">ultrices justo eget,
                         sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus
-                        scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                        scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p> --}}
 
                     <h6 class="display2-size fw-700 text-current ls-2 mb-2">
                         <span class="font-xl">$</span>449
@@ -99,6 +99,40 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <!-- Trong file blade của trang sản phẩm -->
+        @if (Auth::check())
+            <form
+                action="{{ route('product.comment', ['id_product' => $product->id, 'name_product' => urlencode($product->name)]) }}"
+                method="POST">
+                @csrf
+                <div class="form-group">
+                    <label for="content">Comment:</label>
+                    <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        @else
+            <p>Vui lòng đăng nhập để thêm comment.</p>
+        @endif
+        <div class="comment">
+            @php
+                $count = 0;
+            @endphp
+
+            @foreach ($comments as $item)
+                @if ($item->id_product == $product->id)
+                    @php
+                        $count++;
+                    @endphp
+                    <p>Người dùng {{ $item->id_user }}: {{ $item->content }} {{ $item->created_at->format('d/m/Y') }}
+                    </p>
+                @endif
+            @endforeach
+
+            @if ($count == 0)
+                <p>Không có bình luận</p>
+            @endif
         </div>
     </div>
 

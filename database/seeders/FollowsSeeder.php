@@ -15,81 +15,81 @@ class FollowsSeeder extends Seeder
     {
         DB::table('follows')->insert([
             [
-                'id_follow' => 1,
-                'id_store' => 3,
-                'id' => 8,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 2,
-                'id_store'=> 3,
-                'id' => 6,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 3,
-                'id_store'=> 2,
-                'id' => 7,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 4,
-                'id_store'=> 3,
-                'id' => 7,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 5,
-                'id_store' => 3,
                 'id' => 1,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 6,
-                'id_store'=> 3,
-                'id' => 9,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 7,
                 'id_store' => 3,
-                'id' => 10,
+                'id_user' => 8,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at'=> null
             ],
             [
-                'id_follow' => 8,
-                'id_store'=> 2,
-                'id' => 10,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 9,
-                'id_store'=> 2,
-                'id' => 11,
-                'is_follow' => true,
-                'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
-            [
-                'id_follow' => 10,
+                'id' => 2,
                 'id_store'=> 3,
-                'id' => 11,
+                'id_user' => 6,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 3,
+                'id_store'=> 2,
+                'id_user' => 7,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 4,
+                'id_store'=> 3,
+                'id_user' => 7,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 5,
+                'id_store' => 3,
+                'id_user' => 1,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 6,
+                'id_store'=> 3,
+                'id_user' => 9,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 7,
+                'id_store' => 3,
+                'id_user' => 10,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 8,
+                'id_store'=> 2,
+                'id_user' => 10,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 9,
+                'id_store'=> 2,
+                'id_user' => 11,
+                'is_follow' => true,
+                'created_at' => '2024-02-23 08:10:00',
+                'updated_at'=> null
+            ],
+            [
+                'id' => 10,
+                'id_store'=> 3,
+                'id_user' => 11,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at'=> null

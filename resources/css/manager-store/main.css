@@ -1,0 +1,42 @@
+@import "toastr";
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-image_banner_shop::after {
+    content: "";
+    background-color: black;
+    opacity: 0.3;
+    inset: 0;
+    position: absolute;
+}
+.location {
+    display: flex;
+    padding: 20px 32px 20px 40px;
+    align-items: center;
+    justify-content: center;
+}
+.location .content {
+    flex: 1;
+    margin-left: 32px;
+}
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* Adjust the number of lines you want to display */
+}
+
+.hedden-scroll::-webkit-scrollbar {
+    width: 0;
+}

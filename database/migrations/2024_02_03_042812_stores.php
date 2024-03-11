@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stores', function (Blueprint $table) {
-            $table->increments('id_store');
-            $table->unsignedInteger('id')->nullable(false);
+            $table->increments('id');
+            $table->unsignedInteger('id_user')->nullable(false);
             $table->string('name', 100)->nullable(false);
             $table->string('address', 255)->nullable(false);
             $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('image_arr')->nullable();
             $table->timestamps();
 
-            $table->foreign('id')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 

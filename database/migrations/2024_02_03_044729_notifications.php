@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('notifications', function (Blueprint $table) {
-            $table->increments('id_notification');
+            $table->increments('id');
             $table->text('content')->nullable(false);
             $table->string('title', 255)->nullable(false);
             $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn

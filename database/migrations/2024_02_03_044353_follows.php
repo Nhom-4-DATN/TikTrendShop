@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('follows', function (Blueprint $table) {
-            $table->increments('id_follow');
+            $table->increments('id');
             $table->unsignedInteger('id_store')->nullable(false);
-            $table->unsignedInteger('id')->nullable(false);
+            $table->unsignedInteger('id_user')->nullable(false);
             $table->boolean('is_follow')->nullable(false)->default(true); //true hiện, false xóa
             $table->timestamps();
 
-            $table->foreign('id_store')->references('id_store')->on('stores');
-            $table->foreign('id')->references('id')->on('users');
+            $table->foreign('id_store')->references('id')->on('stores');
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 

@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('chats', function (Blueprint $table) {
-            $table->increments('id_chat');
-            $table->unsignedInteger('id')->nullable(false);
+            $table->increments('id');
+            $table->unsignedInteger('id_user')->nullable(false);
             $table->unsignedInteger('id_store')->nullable(false);
             $table->unsignedInteger('id_room')->nullable(false);
             $table->text('content')->nullable(false);
             $table->timestamps();
-            $table->foreign('id')->references('id')->on('users');
-            $table->foreign('id_store')->references('id_store')->on('stores');
-            $table->foreign('id_room')->references('id_room')->on('rooms');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_store')->references('id')->on('stores');
+            $table->foreign('id_room')->references('id')->on('rooms');
         });
     }
 

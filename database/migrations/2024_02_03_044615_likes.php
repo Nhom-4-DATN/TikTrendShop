@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('likes', function (Blueprint $table) {
-            $table->increments('id_like');
+            $table->increments('id');
             $table->unsignedInteger('id_product')->nullable(false);
-            $table->unsignedInteger('id')->nullable(false);
+            $table->unsignedInteger('id_user')->nullable(false);
             $table->boolean('is_like')->nullable(false)->default(true); //true like, false xóa
             $table->timestamps();
 
-            $table->foreign('id_product')->references('id_product')->on('products');
-            $table->foreign('id')->references('id')->on('users');
+            $table->foreign('id_product')->references('id')->on('products');
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 

@@ -16,8 +16,8 @@ class StoresSeeder extends Seeder
     {
         DB::table('stores')->insert([
             [
-                'id_store' => 1,
-                'id' => 3,
+                'id' => 1,
+                'id_user' => 3,
                 'name' => 'Quần áo cho bạn',
                 'address' => 'Quận3, Hồ Chí Minh',
                 'status'=> true,
@@ -28,12 +28,16 @@ class StoresSeeder extends Seeder
                     "image2.jpg",
                     "image3.jpg"
                 ]',
+                'phone' => '0123456789',
+                'slug' => 'laptop-pc',
+                'coin' => 0,
+                'thumb_url'=>'zxvc',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at'=> null
             ],
             [
-                'id_store' => 2,
-                'id' => 4,
+                'id' => 2,
+                'id_user' => 4,
                 'name' => 'Mỹ phẩm cho bạn',
                 'address' => 'Quận 4, Hồ Chí Minh',
                 'status'=> true,
@@ -44,12 +48,16 @@ class StoresSeeder extends Seeder
                     "image2.jpg",
                     "image3.jpg"
                 ]',
+                'phone' => '0123456789',
+                'slug' => 'laptop-pc',
+                'coin' => 0,
+                'thumb_url'=>'zxvc',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at'=> null
             ],
             [
-                'id_store' => 3,
-                'id' => 7,
+                'id' => 3,
+                'id_user' => 7,
                 'name' => 'Laptop & PC cho bạn',
                 'address' => 'Quận 7, Hồ Chí Minh',
                 'status'=> true,
@@ -60,6 +68,10 @@ class StoresSeeder extends Seeder
                     "image2.jpg",
                     "image3.jpg"
                 ]',
+                'phone' => '0123456789',
+                'slug' => 'laptop-pc',
+                'coin' => 0,
+                'thumb_url'=>'zxvc',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at'=> null
             ]

@@ -16,85 +16,112 @@ class CategoriesBlogSeeder extends Seeder
     {
         DB::table('categories_blog')->insert([
             [
-                'id_categories_blog'=> 1,
+                'id'=> 1,
                 'id_store'=> 1,
                 'name'=> 'Áo croptop',
                 'description'=> 'Cách chọn áo croptop phù hợp',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 2,
+                'id'=> 2,
                 'id_store'=> 1,
                 'name'=> 'Quần jeans',
                 'description'=> 'Cách chọn quần jeans phù hợp',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 3,
+                'id'=> 3,
                 'id_store'=> 1,
                 'name'=> 'Áo sơ mi',
                 'description'=> 'Cách chọn áo sơ mi phù hợp',
                 'status' => false,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 4,
+                'id'=> 4,
                 'id_store'=> 2,
                 'name'=> 'Son',
                 'description'=> 'Cách chọn son phù hợp',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 5,
+                'id'=> 5,
                 'id_store'=> 2,
                 'name'=> 'Phấn má hồng',
                 'description'=> 'Cách chọn phấn má hồng phù hợp',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 6,
+                'id'=> 6,
                 'id_store'=> 2,
                 'name'=> 'Sơn móng tay',
                 'description'=> 'Cách chọn sơn móng tay phù hợp',
                 'status' => false,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 7,
+                'id'=> 7,
                 'id_store'=> 3,
                 'name'=> 'Laptop',
                 'description'=> 'Cách chọn Laptop',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ],
             [
-                'id_categories_blog'=> 8,
+                'id'=> 8,
                 'id_store'=> 3,
                 'name'=> 'Chọn PC',
                 'description'=> 'Cách chọn PC',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
-            ],
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
+            ], 
             [
-                'id_categories_blog'=> 9,
+                'id'=> 9,
                 'id_store'=> 3,
                 'name'=> 'Keo tản nhiệt',
                 'description'=> 'Cách chọn keo tản nhiệt',
                 'status' => true,
                 'created_at' => '2024-02-23 08:10:00',
-                'updated_at'=> null
+                'updated_at'=> null,
+                'deleted_at'=> null,
+'parent_id'=>1,
+'slug'=>'url_item'
             ]
         ]);
     }

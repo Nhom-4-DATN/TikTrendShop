@@ -15,7 +15,7 @@ class ProductsSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'id_product' => 1,
+                'id' => 1,
                 'id_store' => 1,
                 'id_category' => 3,
                 'name' => 'Áo sơ mi',
@@ -74,7 +74,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 2,
+                'id' => 2,
                 'id_store' => 1,
                 'id_category' => 2,
                 'name' => 'Quần jeans',
@@ -116,7 +116,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 3,
+                'id' => 3,
                 'id_store' => 1,
                 'id_category' => 3,
                 'name' => 'Áo thun con mèo',
@@ -164,7 +164,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 4,
+                'id' => 4,
                 'id_store' => 1,
                 'id_category' => 3,
                 'name' => 'Áo croptop đáng yêu',
@@ -219,7 +219,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 5,
+                'id' => 5,
                 'id_store' => 1,
                 'id_category' => 2,
                 'name' => 'Quần thể thao',
@@ -271,7 +271,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 6,
+                'id' => 6,
                 'id_store' => 3,
                 'id_category' => 6,
                 'name' => 'Asus gaming tuf f15 fx506lh',
@@ -316,7 +316,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 7,
+                'id' => 7,
                 'id_store' => 3,
                 'id_category' => 6,
                 'name' => 'Dell vostro 14 3000',
@@ -357,7 +357,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 8,
+                'id' => 8,
                 'id_store' => 3,
                 'id_category' => 6,
                 'name' => 'Laptop HP VICTUS 15-fa1155TX 952R1PA',
@@ -399,7 +399,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 9,
+                'id' => 9,
                 'id_store' => 3,
                 'id_category' => 5,
                 'name' => 'PC Intel i3-12100F/ VGA GTX 1650',
@@ -441,7 +441,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 10,
+                'id' => 10,
                 'id_store' => 3,
                 'id_category' => 5,
                 'name' => 'PC AMD R5-5600X/ VGA RX 6600',
@@ -485,7 +485,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 11,
+                'id' => 11,
                 'id_store' => 3,
                 'id_category' => 5,
                 'name' => 'PC Intel i5-12400F/ VGA RX 6600',
@@ -529,7 +529,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 12,
+                'id' => 12,
                 'id_store' => 2,
                 'id_category' => 8,
                 'name' => 'Son 3CE',
@@ -598,7 +598,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 13,
+                'id' => 13,
                 'id_store' => 2,
                 'id_category' => 8,
                 'name' => 'Son Dior Addict Lip Tattoo 541 Natural Sienna',
@@ -652,7 +652,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 14,
+                'id' => 14,
                 'id_store' => 2,
                 'id_category' => 8,
                 'name' => 'Son Gucci The Painted Veil Rouge Mat Lipstick 201',
@@ -711,7 +711,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 15,
+                'id' => 15,
                 'id_store' => 2,
                 'id_category' => 9,
                 'name' => 'Phấn Má Hồng 3CE Màu Pure Cake - Hồng Đào Cực Baby',
@@ -769,7 +769,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 16,
+                'id' => 16,
                 'id_store' => 2,
                 'id_category' => 9,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 219 Rose Montaigne',
@@ -812,7 +812,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 17,
+                'id' => 17,
                 'id_store' => 2,
                 'id_category' =>9 ,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 028 Actrice',
@@ -853,7 +853,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 18,
+                'id' => 18,
                 'id_store' => 1,
                 'id_category' => 2,
                 'name' => 'Quần thun đá banh',
@@ -896,7 +896,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 19,
+                'id' => 19,
                 'id_store' => 1,
                 'id_category' => 2,
                 'name' => 'Quần âu dự tiệc',
@@ -941,7 +941,7 @@ class ProductsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product' => 20,
+                'id' => 20,
                 'id_store' => 1,
                 'id_category' => 3,
                 'name' => 'Áo khoác uniqlo',

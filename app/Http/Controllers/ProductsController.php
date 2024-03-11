@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Products;
 use App\Models\ProductVariations;
+use App\Models\Comments;
+
 class ProductsController extends Controller
 {
     public function index(){
@@ -15,9 +17,10 @@ class ProductsController extends Controller
     }
 
     public function productDetails($id_product){
-        $product = Products::where('id_product', $id_product)->first();
+        $product = Products::find($id_product);
         $product_variations = ProductVariations::all();
-        return view('site/components/user/product_details', compact('product', 'product_variations'));
+        $comments = Comments::all();
+        return view('site/components/user/product_details', compact('product', 'product_variations', 'comments'));
     }
 
     public function search(Request $request){

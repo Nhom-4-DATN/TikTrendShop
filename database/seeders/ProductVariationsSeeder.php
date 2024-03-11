@@ -15,7 +15,7 @@ class ProductVariationsSeeder extends Seeder
     {
         DB::table('product_variations')->insert([
             [
-                'id_product_variation' => 1,
+                'id' => 1,
                 'id_product' => 1,
                 'name' => 'S',
                 'quantity' => 100,
@@ -29,7 +29,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 2,
+                'id' => 2,
                 'id_product' => 1,
                 'name' => 'M',
                 'quantity' => 100,
@@ -43,7 +43,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 3,
+                'id' => 3,
                 'id_product' => 1,
                 'name' => 'L',
                 'quantity' => 100,
@@ -57,7 +57,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 4,
+                'id' => 4,
                 'id_product' => 2,
                 'name' => 'S',
                 'quantity' => 100,
@@ -71,7 +71,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 5,
+                'id' => 5,
                 'id_product' => 2,
                 'name' => 'M',
                 'quantity' => 100,
@@ -85,7 +85,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 6,
+                'id' => 6,
                 'id_product' => 2,
                 'name' => 'L',
                 'quantity' => 100,
@@ -99,7 +99,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 7,
+                'id' => 7,
                 'id_product' => 3,
                 'name' => 'S',
                 'quantity' => 100,
@@ -113,7 +113,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 8,
+                'id' => 8,
                 'id_product' => 3,
                 'name' => 'M',
                 'quantity' => 100,
@@ -127,7 +127,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 9,
+                'id' => 9,
                 'id_product' => 3,
                 'name' => 'L',
                 'quantity' => 100,
@@ -141,7 +141,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 10,
+                'id' => 10,
                 'id_product' => 4,
                 'name' => 'S',
                 'quantity' => 100,
@@ -155,7 +155,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 11,
+                'id' => 11,
                 'id_product' => 4,
                 'name' => 'M',
                 'quantity' => 100,
@@ -169,7 +169,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 12,
+                'id' => 12,
                 'id_product' => 4,
                 'name' => 'L',
                 'quantity' => 100,
@@ -183,7 +183,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 13,
+                'id' => 13,
                 'id_product' => 5,
                 'name' => 'S',
                 'quantity' => 100,
@@ -197,7 +197,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 14,
+                'id' => 14,
                 'id_product' => 5,
                 'name' => 'M',
                 'quantity' => 100,
@@ -211,7 +211,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 15,
+                'id' => 15,
                 'id_product' => 5,
                 'name' => 'L',
                 'quantity' => 100,
@@ -225,7 +225,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 16,
+                'id' => 16,
                 'id_product' => 6,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -239,7 +239,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 17,
+                'id' => 17,
                 'id_product' => 6,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -253,7 +253,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 18,
+                'id' => 18,
                 'id_product' => 6,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -268,7 +268,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 19,
+                'id' => 19,
                 'id_product' => 7,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -282,7 +282,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 20,
+                'id' => 20,
                 'id_product' => 7,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -296,7 +296,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 21,
+                'id' => 21,
                 'id_product' => 7,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -311,7 +311,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 22,
+                'id' => 22,
                 'id_product' => 8,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -325,7 +325,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 23,
+                'id' => 23,
                 'id_product' => 8,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -339,7 +339,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 24,
+                'id' => 24,
                 'id_product' => 8,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -354,7 +354,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 25,
+                'id' => 25,
                 'id_product' => 9,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -368,7 +368,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 26,
+                'id' => 26,
                 'id_product' => 9,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -382,7 +382,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 27,
+                'id' => 27,
                 'id_product' => 9,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -397,7 +397,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 28,
+                'id' => 28,
                 'id_product' => 10,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -411,7 +411,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 29,
+                'id' => 29,
                 'id_product' => 10,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -425,7 +425,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 30,
+                'id' => 30,
                 'id_product' => 10,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -440,7 +440,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 31,
+                'id' => 31,
                 'id_product' => 11,
                 'name' => 'Trắng',
                 'quantity' => 100,
@@ -454,7 +454,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 32,
+                'id' => 32,
                 'id_product' => 11,
                 'name' => 'Đen',
                 'quantity' => 100,
@@ -468,7 +468,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 33,
+                'id' => 33,
                 'id_product' => 11,
                 'name' => 'Bạc',
                 'quantity' => 100,
@@ -483,7 +483,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 34,
+                'id' => 34,
                 'id_product' => 12,
                 'name' => 'Đỏ',
                 'quantity' => 100,
@@ -497,7 +497,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 35,
+                'id' => 35,
                 'id_product' => 12,
                 'name' => 'Hồng',
                 'quantity' => 100,
@@ -511,7 +511,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 36,
+                'id' => 36,
                 'id_product' => 12,
                 'name' => 'Hồng cánh sen',
                 'quantity' => 100,
@@ -526,7 +526,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 37,
+                'id' => 37,
                 'id_product' => 13,
                 'name' => 'Đỏ',
                 'quantity' => 100,
@@ -540,7 +540,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 38,
+                'id' => 38,
                 'id_product' => 13,
                 'name' => 'Hồng',
                 'quantity' => 100,
@@ -554,7 +554,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 39,
+                'id' => 39,
                 'id_product' => 13,
                 'name' => 'Hồng cánh sen',
                 'quantity' => 100,
@@ -569,7 +569,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 40,
+                'id' => 40,
                 'id_product' => 14,
                 'name' => 'Đỏ',
                 'quantity' => 100,
@@ -583,7 +583,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 41,
+                'id' => 41,
                 'id_product' => 14,
                 'name' => 'Hồng',
                 'quantity' => 100,
@@ -597,7 +597,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 42,
+                'id' => 42,
                 'id_product' => 14,
                 'name' => 'Hồng cánh sen',
                 'quantity' => 100,
@@ -612,7 +612,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 43,
+                'id' => 43,
                 'id_product' => 15,
                 'name' => 'Phấn Má Hồng 3CE Màu Pure Cake - Hồng Đào Cực Baby',
                 'quantity' => 100,
@@ -627,7 +627,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 44,
+                'id' => 44,
                 'id_product' => 16,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 219 Rose Montaigne',
                 'quantity' => 100,
@@ -642,7 +642,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 45,
+                'id' => 45,
                 'id_product' => 17,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 028 Actrice',
                 'quantity' => 100,
@@ -657,7 +657,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 46,
+                'id' => 46,
                 'id_product' => 18,
                 'name' => 'S',
                 'quantity' => 100,
@@ -671,7 +671,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 47,
+                'id' => 47,
                 'id_product' => 18,
                 'name' => 'M',
                 'quantity' => 100,
@@ -685,7 +685,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 48,
+                'id' => 48,
                 'id_product' => 18,
                 'name' => 'L',
                 'quantity' => 100,
@@ -700,7 +700,7 @@ class ProductVariationsSeeder extends Seeder
             ],
 
             [
-                'id_product_variation' => 49,
+                'id' => 49,
                 'id_product' => 19,
                 'name' => 'S',
                 'quantity' => 100,
@@ -714,7 +714,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 50,
+                'id' => 50,
                 'id_product' => 19,
                 'name' => 'M',
                 'quantity' => 100,
@@ -728,7 +728,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 51,
+                'id' => 51,
                 'id_product' => 19,
                 'name' => 'L',
                 'quantity' => 100,
@@ -742,7 +742,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 52,
+                'id' => 52,
                 'id_product' => 20,
                 'name' => 'S',
                 'quantity' => 100,
@@ -756,7 +756,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 53,
+                'id' => 53,
                 'id_product' => 20,
                 'name' => 'M',
                 'quantity' => 100,
@@ -770,7 +770,7 @@ class ProductVariationsSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_product_variation' => 54,
+                'id' => 54,
                 'id_product' => 20,
                 'name' => 'L',
                 'quantity' => 100,
