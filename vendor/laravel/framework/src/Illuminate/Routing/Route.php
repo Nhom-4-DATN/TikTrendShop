@@ -171,7 +171,7 @@ class Route
         $this->methods = (array) $methods;
         $this->action = Arr::except($this->parseAction($action), ['prefix']);
 
-        if (in_array('GET', $this->methods) && ! in_array('HEAD', $this->methods)) {
+        if (in_array('GET', $this->methods) && !in_array('HEAD', $this->methods)) {
             $this->methods[] = 'HEAD';
         }
 
@@ -218,7 +218,7 @@ class Route
      */
     protected function isControllerAction()
     {
-        return is_string($this->action['uses']) && ! $this->isSerializedClosure();
+        return is_string($this->action['uses']) && !$this->isSerializedClosure();
     }
 
     /**
@@ -257,7 +257,9 @@ class Route
     protected function runController()
     {
         return $this->controllerDispatcher()->dispatch(
-            $this, $this->getController(), $this->getControllerMethod()
+            $this,
+            $this->getController(),
+            $this->getControllerMethod()
         );
     }
 
@@ -268,11 +270,11 @@ class Route
      */
     public function getController()
     {
-        if (! $this->isControllerAction()) {
+        if (!$this->isControllerAction()) {
             return null;
         }
 
-        if (! $this->controller) {
+        if (!$this->controller) {
             $class = $this->getControllerClass();
 
             $this->controller = $this->container->make(ltrim($class, '\\'));
@@ -334,11 +336,11 @@ class Route
         $this->compileRoute();
 
         foreach (self::getValidators() as $validator) {
-            if (! $includingMethod && $validator instanceof MethodValidator) {
+            if (!$includingMethod && $validator instanceof MethodValidator) {
                 continue;
             }
 
-            if (! $validator->matches($this, $request)) {
+            if (!$validator->matches($this, $request)) {
                 return false;
             }
         }
@@ -353,7 +355,7 @@ class Route
      */
     protected function compileRoute()
     {
-        if (! $this->compiled) {
+        if (!$this->compiled) {
             $this->compiled = $this->toSymfonyRoute()->compile();
         }
 
@@ -371,7 +373,7 @@ class Route
         $this->compileRoute();
 
         $this->parameters = (new RouteParameterBinder($this))
-                        ->parameters($request);
+            ->parameters($request);
 
         $this->originalParameters = $this->parameters;
 
@@ -493,7 +495,7 @@ class Route
      */
     public function parametersWithoutNulls()
     {
-        return array_filter($this->parameters(), fn ($p) => ! is_null($p));
+        return array_filter($this->parameters(), fn ($p) => !is_null($p));
     }
 
     /**
@@ -517,7 +519,7 @@ class Route
      */
     protected function compileParameterNames()
     {
-        preg_match_all('/\{(.*?)\}/', $this->getDomain().$this->uri, $matches);
+        preg_match_all('/\{(.*?)\}/', $this->getDomain() . $this->uri, $matches);
 
         return array_map(fn ($m) => trim($m, '?'), $matches[1]);
     }
@@ -765,7 +767,8 @@ class Route
         $this->action['domain'] = $parsed->uri;
 
         $this->bindingFields = array_merge(
-            $this->bindingFields, $parsed->bindingFields
+            $this->bindingFields,
+            $parsed->bindingFields
         );
 
         return $this;
@@ -779,7 +782,7 @@ class Route
     public function getDomain()
     {
         return isset($this->action['domain'])
-                ? str_replace(['http://', 'https://'], '', $this->action['domain']) : null;
+            ? str_replace(['http://', 'https://'], '', $this->action['domain']) : null;
     }
 
     /**
@@ -804,7 +807,7 @@ class Route
 
         $this->updatePrefixOnAction($prefix);
 
-        $uri = rtrim($prefix, '/').'/'.ltrim($this->uri, '/');
+        $uri = rtrim($prefix, '/') . '/' . ltrim($this->uri, '/');
 
         return $this->setUri($uri !== '/' ? trim($uri, '/') : $uri);
     }
@@ -817,7 +820,7 @@ class Route
      */
     protected function updatePrefixOnAction($prefix)
     {
-        if (! empty($newPrefix = trim(rtrim($prefix, '/').'/'.ltrim($this->action['prefix'] ?? '', '/'), '/'))) {
+        if (!empty($newPrefix = trim(rtrim($prefix, '/') . '/' . ltrim($this->action['prefix'] ?? '', '/'), '/'))) {
             $this->action['prefix'] = $newPrefix;
         }
     }
@@ -878,7 +881,7 @@ class Route
      */
     public function name($name)
     {
-        $this->action['as'] = isset($this->action['as']) ? $this->action['as'].$name : $name;
+        $this->action['as'] = isset($this->action['as']) ? $this->action['as'] . $name : $name;
 
         return $this;
     }
@@ -913,7 +916,7 @@ class Route
     public function uses($action)
     {
         if (is_array($action)) {
-            $action = $action[0].'@'.$action[1];
+            $action = $action[0] . '@' . $action[1];
         }
 
         $action = is_string($action) ? $this->addGroupNamespaceToStringUses($action) : $action;
@@ -934,8 +937,8 @@ class Route
     {
         $groupStack = last($this->router->getGroupStack());
 
-        if (isset($groupStack['namespace']) && ! str_starts_with($action, '\\')) {
-            return $groupStack['namespace'].'\\'.$action;
+        if (isset($groupStack['namespace']) && !str_starts_with($action, '\\')) {
+            return $groupStack['namespace'] . '\\' . $action;
         }
 
         return $action;
@@ -1025,14 +1028,15 @@ class Route
      */
     public function gatherMiddleware()
     {
-        if (! is_null($this->computedMiddleware)) {
+        if (!is_null($this->computedMiddleware)) {
             return $this->computedMiddleware;
         }
 
         $this->computedMiddleware = [];
 
         return $this->computedMiddleware = Router::uniqueMiddleware(array_merge(
-            $this->middleware(), $this->controllerMiddleware()
+            $this->middleware(),
+            $this->controllerMiddleware()
         ));
     }
 
@@ -1048,7 +1052,7 @@ class Route
             return (array) ($this->action['middleware'] ?? []);
         }
 
-        if (! is_array($middleware)) {
+        if (!is_array($middleware)) {
             $middleware = func_get_args();
         }
 
@@ -1057,7 +1061,8 @@ class Route
         }
 
         $this->action['middleware'] = array_merge(
-            (array) ($this->action['middleware'] ?? []), $middleware
+            (array) ($this->action['middleware'] ?? []),
+            $middleware
         );
 
         return $this;
@@ -1073,8 +1078,8 @@ class Route
     public function can($ability, $models = [])
     {
         return empty($models)
-                    ? $this->middleware(['can:'.$ability])
-                    : $this->middleware(['can:'.$ability.','.implode(',', Arr::wrap($models))]);
+            ? $this->middleware(['can:' . $ability])
+            : $this->middleware(['can:' . $ability . ',' . implode(',', Arr::wrap($models))]);
     }
 
     /**
@@ -1084,7 +1089,7 @@ class Route
      */
     public function controllerMiddleware()
     {
-        if (! $this->isControllerAction()) {
+        if (!$this->isControllerAction()) {
             return [];
         }
 
@@ -1095,13 +1100,15 @@ class Route
 
         if (is_a($controllerClass, HasMiddleware::class, true)) {
             return $this->staticallyProvidedControllerMiddleware(
-                $controllerClass, $controllerMethod
+                $controllerClass,
+                $controllerMethod
             );
         }
 
         if (method_exists($controllerClass, 'getMiddleware')) {
             return $this->controllerDispatcher()->getMiddleware(
-                $this->getController(), $controllerMethod
+                $this->getController(),
+                $controllerMethod
             );
         }
 
@@ -1119,7 +1126,8 @@ class Route
     {
         return collect($class::middleware())->reject(function ($middleware) use ($method) {
             return static::methodExcludedByOptions(
-                $method, ['only' => $middleware->only, 'except' => $middleware->except]
+                $method,
+                ['only' => $middleware->only, 'except' => $middleware->except]
             );
         })->map->middleware->values()->all();
     }
@@ -1133,7 +1141,8 @@ class Route
     public function withoutMiddleware($middleware)
     {
         $this->action['excluded_middleware'] = array_merge(
-            (array) ($this->action['excluded_middleware'] ?? []), Arr::wrap($middleware)
+            (array) ($this->action['excluded_middleware'] ?? []),
+            Arr::wrap($middleware)
         );
 
         return $this;
@@ -1280,9 +1289,13 @@ class Route
     public function toSymfonyRoute()
     {
         return new SymfonyRoute(
-            preg_replace('/\{(\w+?)\?\}/', '{$1}', $this->uri()), $this->getOptionalParameterNames(),
-            $this->wheres, ['utf8' => true],
-            $this->getDomain() ?: '', [], $this->methods
+            preg_replace('/\{(\w+?)\?\}/', '{$1}', $this->uri()),
+            $this->getOptionalParameterNames(),
+            $this->wheres,
+            ['utf8' => true],
+            $this->getDomain() ?: '',
+            [],
+            $this->methods
         );
     }
 

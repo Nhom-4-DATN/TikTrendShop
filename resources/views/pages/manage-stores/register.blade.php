@@ -32,4 +32,8 @@
             </div>
         </x-form.index>
     </div>
+    <script>
+        const provinces_url = "{{ route('components.render-provinces') }}";
+        const renderLocation = "{{ route('components.render-list-location') }}";
+    </script>
 @endsection

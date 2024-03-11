@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,9 +49,37 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'user_name' => ['required', 'string', 'min:6', 'max:15'],
+            'full_name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'regex:/^\+?[0-9]+$/i', 'max:15', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:3', 'confirmed'],
+        ], [
+            'user_name.required' => 'Vui lòng nhập tên người dùng.',
+            'user_name.string' => 'Tên người dùng phải là một chuỗi.',
+            'user_name.min' => 'Tên người dùng phải có ít nhất :min ký tự.',
+            'user_name.max' => 'Tên người dùng không được vượt quá :max ký tự.',
+
+            'full_name.required' => 'Vui lòng nhập họ tên.',
+            'full_name.string' => 'Họ tên phải là một chuỗi.',
+            'full_name.max' => 'Họ tên không được vượt quá :max ký tự.',
+
+            'phone.required' => 'Vui lòng nhập số điện thoại.',
+            'phone.string' => 'Số điện thoại phải là một chuỗi.',
+            'phone.regex' => 'Số điện thoại không hợp lệ.',
+            'phone.max' => 'Số điện thoại không được vượt quá :max ký tự.',
+            'phone.unique' => 'Số điện thoại đã tồn tại.',
+
+            'email.required' => 'Vui lòng nhập địa chỉ email.',
+            'email.string' => 'Địa chỉ email phải là một chuỗi.',
+            'email.email' => 'Địa chỉ email không hợp lệ.',
+            'email.max' => 'Địa chỉ email không được vượt quá :max ký tự.',
+            'email.unique' => 'Địa chỉ email đã tồn tại.',
+
+            'password.required' => 'Vui lòng nhập mật khẩu.',
+            'password.string' => 'Mật khẩu phải là một chuỗi.',
+            'password.min' => 'Mật khẩu phải có ít nhất :min ký tự.',
+            'password.confirmed' => 'Xác nhận mật khẩu không khớp.'
         ]);
     }
 
@@ -64,8 +92,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'full_name' => $data['name'],
-            'user_name' => $data['email'],
+            'user_name' => $data['user_name'],
+            'full_name' => $data['full_name'],
+            'phone' => $data['phone'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

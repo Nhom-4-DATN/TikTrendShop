@@ -5,7 +5,7 @@
         <div class="card shadow-sm mb-4">
             <div class="flex justify-content-between  align-items-center py-4 px-3">
                 <div class="flex">
-                    <a href="{{ route('manager.blog.category.create') }}" class="btn btn-primary">
+                    <a href="{{ route('manager.category.create') }}" class="btn btn-primary">
                         <i class="bi bi-plus-circle fs-4 "></i>
                         <span class="ms-2">Tạo mới</span>
                     </a>
@@ -65,7 +65,7 @@
                                     <td>{{ $categoryBlog->status !== 1 ? 'Ẩn' : 'Hiển thị' }}</td>
                                     <td>
                                         <div class="d-flex justify-content-end ">
-                                            <form action="{{ route('manager.blog.category.delete', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" method="POST">
+                                            <form action="{{ route('manager.category.delete', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger">
@@ -73,7 +73,7 @@
                                                     <span class="ms-1">Xóa</span>
                                                 </button>
                                             </form>
-                                            <a href="{{ route('manager.blog.category.update', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" class="btn btn-warning ms-2">
+                                            <a href="{{ route('manager.category.update', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" class="btn btn-warning ms-2">
                                                 <i class="bi bi-pencil-square"></i>
                                                 <span class="ms-1">Sửa</span>
                                             </a>

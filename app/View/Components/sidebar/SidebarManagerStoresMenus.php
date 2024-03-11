@@ -107,17 +107,17 @@ class SidebarManagerStoresMenus extends Component
                     [
                         'title' => 'Tất cả',
                         'icon' => '',
-                        'url' => Route('manager.blog'),
+                        'url' => Route('manager.blog.index'),
                     ],
                     [
                         'title' => 'tạo bài đăng',
                         'icon' => '',
-                        'url' => Route('manager.create'),
+                        'url' => Route('manager.blog.create'),
                     ],
                     [
                         'title' => 'danh mục bài đăng',
                         'icon' => '',
-                        'url' => Route('manager.blog.category'),
+                        'url' => Route('manager.category.index'),
                     ]
                 ]
             ],

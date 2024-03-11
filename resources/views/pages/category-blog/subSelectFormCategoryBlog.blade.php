@@ -1,5 +1,5 @@
 @foreach ($data as $item)
-    <option value="{{ $item->id }}" {{ optional($categoryBlog)->id == $item->id ? 'disabled' : '' }} {{ optional($categoryBlog)->parent_id == $item->id ? 'selected' : '' }}>
+    <option value="{{ $item->id }}" {{ !empty($categoryBlog) && optional($categoryBlog)->id == $item->id ? 'disabled' : '' }} {{ !empty($categoryBlog) && optional($categoryBlog)->parent_id == $item->id ? 'selected' : '' }}>
         {{ $level . ' | ' . $item->name }}
     </option>
     @if ($item->children->count() > 0)
