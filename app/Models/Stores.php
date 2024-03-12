@@ -22,5 +22,9 @@ class Stores extends Model
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
+    function hasManyBlogs(): HasMany
+    {
+        return $this->hasMany(Blog::class, 'id_store');
+    }
     use HasFactory;
 }

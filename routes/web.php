@@ -7,10 +7,8 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AddressController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryBlogController;
 use App\Http\Controllers\ComponentController;
-use App\Http\Controllers\ManagerStores\StoresController;
+use App\Http\Controllers\StoresController;
 
 
 /*
@@ -30,7 +28,8 @@ Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
         Route::get('/', 'index')->name('manager.shop');
         Route::prefix('shop')->group(function () {
             //  đăng ký cửa hàng
-            Route::match(['get', 'post'], 'register', request()->method('get') ? 'formCU' : 'register')->name('register.shop');
+            Route::get('register',  'formCU')->name('register.shop');
+            Route::post('register', 'register')->name('register.shop');
             // cập nhập cửa hàng
             Route::get('{slug}', 'detail')->name('manager.shop-detail');
             Route::put('update/{slug}', 'update')->name('manager.update.shop');

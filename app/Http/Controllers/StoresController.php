@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ManagerStores;
+namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidateFormStoreCU;
 use App\Models\Stores;
@@ -8,7 +8,9 @@ use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -26,6 +28,7 @@ class StoresController extends Controller
     }
     function formCU()
     {
+        if (!empty(User::find(Auth::id())->oneStore)) return redirect(route('manager.shop'));
         return view('pages.manage-stores.register', ['store' => $store ?? []]);
     }
     function register(ValidateFormStoreCU $req)
@@ -36,7 +39,7 @@ class StoresController extends Controller
                 $fileName = time() . '.' . $file->getClientOriginalExtension();
                 $thumb_url = $file->storeAs('uploads', $fileName, 'public');
             }
-            $store =  $this->storesModel->create([
+            $this->storesModel->create([
                 'name' => $req->name_shop,
                 'phone' => $req->phone_number,
                 'description' => $req->description,
@@ -45,9 +48,9 @@ class StoresController extends Controller
                 'thumb_url' => $thumb_url,
                 'id_user' => Auth::id(),
             ]);
-            return response()->json($store);
+            return redirect(route('manager.shop'));
         } catch (Exception $e) {
-            return back()->with(['error' => $e->getMessage()]);
+            return response()->json($e->getMessage());
         }
     }
     function detail(Request $req, $slug)
@@ -60,6 +63,8 @@ class StoresController extends Controller
         try {
             $store = $this->storesModel->where('slug', $slug)->first();
             if ($req->hasFile('thumb_image')) {
+                echo 1;
+                die;
                 if (Storage::exists('public/' . $store->thumb_url)) {
                     Storage::delete('public/' . $store->thumb_url);
                 }

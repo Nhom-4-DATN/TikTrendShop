@@ -33,4 +33,8 @@ class CategoryBlog extends Model
     {
         return $this->ancestors()->pluck('id')->contains($parentId);
     }
+    function hasManyBlogs(): HasMany
+    {
+        return $this->hasMany(Blog::class, 'id_categories_blog');
+    }
 }

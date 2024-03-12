@@ -6,7 +6,7 @@
                 <h4 class="fw-bold fs-4">Tạo bài viết</h4>
             </div>
             <div class="card-body">
-                <x-form.index>
+                <x-form.index action="{{ route('manager.blog.create') }}" mehtod="post">
                     <div>
                         <x-form.input id="title" name="title" lable="tên bài viết" />
                     </div>

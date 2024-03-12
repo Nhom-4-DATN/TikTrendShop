@@ -60,7 +60,7 @@
                                             </div>
                                         @endif
                                     </td>
-                                    <td>0</td>
+                                    <td>{{ $categoryBlog->has_many_blogs_count }}</td>
                                     <td>{{ date($categoryBlog->created_at) }}</td>
                                     <td>{{ $categoryBlog->status !== 1 ? 'Ẩn' : 'Hiển thị' }}</td>
                                     <td>

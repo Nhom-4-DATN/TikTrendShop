@@ -18,7 +18,9 @@ class BlogController extends Controller
     }
     function manageBlog()
     {
-        return view('pages.blog.manage-log');
+        $blogList = $this->blogService->allToMe(25);
+        $countBlog =  $this->blogService->CountItemToMe();
+        return view('pages.blog.manage-log', ['blogList' => $blogList, 'countBlog' => $countBlog]);
     }
     function form()
     {
@@ -29,11 +31,11 @@ class BlogController extends Controller
     {
         try {
             $this->blogService->create($req);
+            return response()->json($this->blogService);
             toastr()->success('Tạo bài đăng thành công', 'Tạo bài đăng');
             return back();
         } catch (Exception $e) {
             toastr()->success($e->getMessage(), 'Tạo bài đăng');
-            return back();
         }
     }
 }

@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class ChangePasswordController extends Controller
 {
-    public function password(){
+    public function password()
+    {
         return view('site.components.user.change-password');
     }
 
