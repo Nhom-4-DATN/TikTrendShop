@@ -33,5 +33,6 @@
     </body>
     @stack('scripts')
     @toastr_render
+    @vite(['resources/js/manger-store/table.js']);
 
 </html>

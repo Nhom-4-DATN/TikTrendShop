@@ -19,7 +19,9 @@ class CategoryRepository implements CategoryBlogInterface
     }
     function getAllToMe($paginate = null)
     {
-        $categoryBlogQuery = User::find(Auth::id())->oneStore->categoryBlogList()->with('children')->withCount('hasManyBlogs')->whereNull('parent_id');
+        $categoryBlogQuery = User::find(Auth::id())
+            ->oneStore->categoryBlogList()->with('children')
+            ->withCount('hasManyBlogs')->whereNull('parent_id');
         $data = isset($paginate) && $paginate != 0 ? $categoryBlogQuery->paginate($paginate) : $categoryBlogQuery->get();
         return $data;
     }
@@ -58,5 +60,8 @@ class CategoryRepository implements CategoryBlogInterface
         $categoryBlog = $this->categoryBlogModel->find($id);
         $categoryBlog->delete();
         return $categoryBlog;
+    }
+    function showAllBlogDelete()
+    {
     }
 }

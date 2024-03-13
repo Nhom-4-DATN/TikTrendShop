@@ -1,6 +1,6 @@
 @props(['id', 'title', 'content'])
 
-<x-modal.index :id="$id" :title="$title">
+<x-modal.index class="modal-massage" :id="$id" :title="$title">
     <div class="message-content">
         <p>{{ $content }}</p>
     </div>
