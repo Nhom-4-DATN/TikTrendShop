@@ -4,8 +4,8 @@
         <x-form.index :action="route('register.shop')" :class="'row g-3 needs-validation'" novalidate :method="'POST'" :enctype="'multipart/form-data'">
             <div class="col-3">
                 <div class="position-relative rounded-1 overflow-hidden">
-                    <x-form.input-image :src="asset('images/default/shop.jpeg')" :name="'thumb-image'" />
-                    <p class="position-absolute bottom-0 left-0 right-0 text-center m-0 w-100 bg-dark bg-opacity-50 text-white py-1 ">sữa hình ảnh</p>
+                    <x-form.input-image :src="asset('images/t-31.jpg')" :name="'thumb-image'" />
+                    <p class="position-absolute bottom-0 left-0 right-0 text-center m-0 w-100 bg-dark bg-opacity-50 text-white py-1 ">sửa hình ảnh</p>
                 </div>
             </div>
             <div class="col-9">
@@ -32,4 +32,8 @@
             </div>
         </x-form.index>
     </div>
+    <script>
+        const provinces_url = "{{ route('components.render-provinces') }}";
+        const renderLocation = "{{ route('components.render-list-location') }}";
+    </script>
 @endsection

@@ -27,6 +27,9 @@ use App\Http\Controllers\CommentController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 Route::auth();
 
 Route::middleware(['auth'])->group(function () {
@@ -87,12 +90,11 @@ Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
     });
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 Route::controller(ComponentController::class)->group(function () {
     Route::get('render-provinces', 'renderProvinces')->name('components.render-provinces');
     Route::get('render-list-location', 'renderListLocation')->name('components.render-list-location');
     Route::get('render-form-location', 'renderFormLocation')->name('components.render-form-location');
 });
-Auth::routes();

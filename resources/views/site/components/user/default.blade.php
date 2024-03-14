@@ -18,28 +18,28 @@
                                     <h4 class="fw-600 font-xsss mb-0 mt-0">Thông tin tài khoản</h4><i
                                         class="ti-angle-right font-xsss text-grey-500 ms-auto mt-3"></i>
                                 </a></li>
-                            <li class="list-inline-item d-block border-bottom me-0"><a href="contact-information.html"
+                            <li class="list-inline-item d-block border-bottom me-0"><a href="{{ route('register.shop') }}"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
-                                        class="btn-round-md bg-gold-gradiant text-white feather-map-pin font-md me-3"></i>
-                                    <h4 class="fw-600 font-xsss mb-0 mt-0">Saved Address</h4><i
+                                        class="btn-round-md bg-gold-gradiant text-white fas fa-shopping-cart font-md me-3"></i>
+                                    <h4 class="fw-600 font-xsss mb-0 mt-0">Đăng ký cửa hàng</h4><i
                                         class="ti-angle-right font-xsss text-grey-500 ms-auto mt-3"></i>
                                 </a></li>
-                            <li class="list-inline-item d-block me-0"><a href="social.html"
+                            {{-- <li class="list-inline-item d-block me-0"><a href="social.html"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
                                         class="btn-round-md bg-red-gradiant text-white feather-twitter font-md me-3"></i>
                                     <h4 class="fw-600 font-xsss mb-0 mt-0">Social Acount</h4><i
                                         class="ti-angle-right font-xsss text-grey-500 ms-auto mt-3"></i>
-                                </a></li>
+                                </a></li> --}}
                         </ul>
 
                         <div class="nav-caption fw-600 font-xsss text-grey-500 mb-2">Tài khoản</div>
                         <ul class="list-inline mb-4">
-                            <li class="list-inline-item d-block border-bottom me-0"><a href="payment.html"
+                            {{-- <li class="list-inline-item d-block border-bottom me-0"><a href="payment.html"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
                                         class="btn-round-md bg-mini-gradiant text-white feather-credit-card font-md me-3"></i>
                                     <h4 class="fw-600 font-xsss mb-0 mt-0">My Cards</h4><i
                                         class="ti-angle-right font-xsss text-grey-500 ms-auto mt-3"></i>
-                                </a></li>
+                                </a></li> --}}
                             <li class="list-inline-item d-block  me-0"><a href="{{ route('password') }}"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
                                         class="btn-round-md bg-blue-gradiant text-white feather-inbox font-md me-3"></i>
@@ -51,7 +51,7 @@
 
                         <div class="nav-caption fw-600 font-xsss text-grey-500 mb-2">Khác</div>
                         <ul class="list-inline">
-                            <li class="list-inline-item d-block border-bottom me-0"><a href="default-notification.html"
+                            {{-- <li class="list-inline-item d-block border-bottom me-0"><a href="default-notification.html"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
                                         class="btn-round-md bg-gold-gradiant text-white feather-bell font-md me-3"></i>
                                     <h4 class="fw-600 font-xsss mb-0 mt-0">Notification</h4><i
@@ -62,7 +62,7 @@
                                         class="btn-round-md bg-primary-gradiant text-white feather-help-circle font-md me-3"></i>
                                     <h4 class="fw-600 font-xsss mb-0 mt-0">Help</h4><i
                                         class="ti-angle-right font-xsss text-grey-500 ms-auto mt-3"></i>
-                                </a></li>
+                                </a></li> --}}
                             <li class="list-inline-item d-block me-0"><a href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                     class="pt-2 pb-2 d-flex align-items-center"><i
