@@ -25,21 +25,31 @@ class BlogRepository
             'like' => 'count_like',
         ];
     }
-    function allToMe($paginate = null)
+    function queryAllBlog()
     {
-        $blogQuery =  User::find(Auth::id())->oneStore->hasManyBlogs()->with('category:id,name,slug')->orderBy($this->filterBlog[$_GET['order'] ?? 'createdAt'], $_GET['by'] ?? 'DESC');
+        $by = $_GET['by'] ?? 'DESC';
+        $order = $this->filterBlog[$_GET['order'] ?? 'createdAt'];
+        $blogQuery =  User::find(Auth::id())->oneStore->hasManyBlogs()
+            ->with('category:id,name,slug')
+            ->orderBy($order, $by);
         if (!empty($_GET['search'])) {
             $textSearch = "%" . $_GET['search'] . "%";
-            $blogQuery->where('title', 'LIKE', $textSearch)->orWhereHas('category', function ($query) use ($textSearch) {
-                $query->where('name', 'LIKE', $textSearch);
-            });
+            $blogQuery->where('title', 'LIKE', $textSearch)
+                ->orWhereHas('category', function ($query) use ($textSearch) {
+                    $query->where('name', 'LIKE', $textSearch);
+                });
         }
-        // if (!empty($_GET['view_min']) && !empty($_GET['view_max'])) {
-        //     return 'chứng năng đang phát triển';
-        // }
+        if (!empty($_GET['view_min']) && !empty($_GET['view_min'])) {
+            $blogQuery->whereBetween('count_views', [$_GET['view_min'], $_GET['view_min']]);
+        }
         if (!empty($_GET['created_at_start']) && !empty($_GET['created_at_end'])) {
             $blogQuery->whereBetween('created_at', [$_GET['created_at_start'], $_GET['created_at_end']]);
         }
+        return  $blogQuery;
+    }
+    function allToMe($paginate = null)
+    {
+        $blogQuery = $this->queryAllBlog();
         $data = isset($paginate) && $paginate != 0 ? $blogQuery->paginate($paginate)->onEachSide(2) : $blogQuery->get();
         return $data;
     }
@@ -73,28 +83,25 @@ class BlogRepository
             'id_categories_blog' => $data->category_id,
         ]);
     }
-    function delete($id)
+    function delete($arrId)
     {
-        $arr = explode(',', $id);
-        $blog = $this->blogModel->whereIn('id', $arr);
+        $blog = $this->blogModel->whereIn('id', $arrId);
         return $blog->delete();
     }
     function showAllDelete($paginate)
     {
-        $blogQuery =  User::find(Auth::id())->oneStore->hasManyBlogs()->with('category:id,name,slug')->orderBy($this->filterBlog[$_GET['order'] ?? 'createdAt'], $_GET['by'] ?? 'DESC')->onlyTrashed();
+        $blogQuery = $blogQuery = $this->queryAllBlog()->onlyTrashed();
         $data = isset($paginate) && $paginate != 0 ? $blogQuery->paginate($paginate)->onEachSide(2) : $blogQuery->get();
         return $data;
     }
-    function restore($id)
+    function restore($arrId)
     {
-        $arr = explode(',', $id);
-        $blog = $this->blogModel->withTrashed()->whereIn('id', $arr);
+        $blog = $this->blogModel->withTrashed()->whereIn('id', $arrId);
         return $blog->restore();
     }
-    function destroy($id)
+    function destroy($arrId)
     {
-        $arr = explode(',', $id);
-        $blog = $this->blogModel->withTrashed()->whereIn('id', $arr);
+        $blog = $this->blogModel->withTrashed()->whereIn('id', $arrId);
         return $blog->forceDelete();
     }
 }

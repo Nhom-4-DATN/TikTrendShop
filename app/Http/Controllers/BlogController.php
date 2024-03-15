@@ -75,7 +75,11 @@ class BlogController extends Controller
     function delete(Request $req)
     {
         try {
-            $this->blogService->delete($req->id);
+            $arr = explode(',', $req->id);
+            if (!$arr > 0 || $arr[0] == '') {
+                return throw new Exception('xóa thất bại');
+            }
+            $this->blogService->delete($arr);
             toastr()->success('xóa thành công', 'xóa  bài đăng');
             return back();
         } catch (Exception $e) {
@@ -86,7 +90,12 @@ class BlogController extends Controller
     function restore(Request $req)
     {
         try {
-            $this->blogService->restore($req->id);
+            $arr = explode(',', $req->id);
+
+            if (!$arr > 0 || $arr[0] == '') {
+                return throw new Exception('xóa thất bại');
+            }
+            $this->blogService->restore($arr);
             toastr()->success('Đã khôi phục', 'khôi phục  bài đăng');
             return back();
         } catch (Exception $e) {
@@ -97,7 +106,11 @@ class BlogController extends Controller
     function destroy(Request $req)
     {
         try {
-            $this->blogService->destroy($req->id);
+            $arr = explode(',', $req->id);
+            if (!$arr > 0 || $arr[0] == '') {
+                return throw new Exception('xóa thất bại');
+            }
+            $this->blogService->destroy($arr);
             toastr()->success('đã xóa hoàng toàn bài đăng nầy', 'loại bỏ bài đăng');
             return back();
         } catch (Exception $e) {

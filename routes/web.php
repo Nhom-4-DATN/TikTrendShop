@@ -22,22 +22,22 @@ use App\Http\Controllers\StoresController;
 |
 */
 
-Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
-    Route::controller(StoresController::class)->group(function () {
-        // trang chủ cửa hàng
-        Route::get('/', 'index')->name('manager.shop');
-        Route::prefix('shop')->group(function () {
-            //  đăng ký cửa hàng
-            Route::get('register',  'formCU')->name('register.shop');
-            Route::post('register', 'register')->name('register.shop');
-            // cập nhập cửa hàng
-            Route::get('{slug}', 'detail')->name('manager.shop-detail');
-            Route::put('update/{slug}', 'update')->name('manager.update.shop');
+Route::middleware(['auth'])->group(function () {
+    Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
+        Route::controller(StoresController::class)->group(function () {
+            // trang chủ cửa hàng
+            Route::get('/', 'index')->name('manager.shop');
+            Route::prefix('shop')->group(function () {
+                //  đăng ký cửa hàng
+                Route::get('register',  'formCU')->name('register.shop');
+                Route::post('register', 'register')->name('register.shop');
+                // cập nhập cửa hàng
+                Route::get('{slug}', 'detail')->name('manager.shop-detail');
+                Route::put('update/{slug}', 'update')->name('manager.update.shop');
+            });
         });
     });
 });
-
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::auth();
 
