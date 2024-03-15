@@ -6,10 +6,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ProductsController;
+//
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryBlogController;
 use App\Http\Controllers\ComponentController;
-use App\Http\Controllers\StoresController;
+use App\Http\Controllers\ManagerStores\StoresController;
 
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +43,9 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 Route::auth();
 
 Route::middleware(['auth'])->group(function () {
@@ -54,9 +61,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/change-password', [ChangePasswordController::class, 'changePassword'])->name('change-password');
     // products
     Route::get('/products', [ProductsController::class, 'index'])->name('products');
-    Route::get('/product-details/{id_product}-{name_product}', [ProductsController::class, 'productDetails'])->name('productDetails');
+    Route::get('/product-details/{id}-{name_product}', [ProductsController::class, 'productDetails'])->name('productDetails');
     Route::get('/search', [ProductsController::class, 'search'])->name('search');
+    Route::post('/products/{id_product}/{name_product}/comment', [CommentController::class, 'comment'])->name('product.comment');
 });
+
 Route::prefix('address')->controller(AddressController::class)->group(function () {
     Route::get('create', 'formCU')->name('address.create');
     Route::post('create', 'create')->name('address.create');

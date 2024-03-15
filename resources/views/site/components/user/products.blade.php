@@ -36,7 +36,7 @@
                         <div class="card w-100 border-0 mt-4">
                             <div class="card-image w-100 p-0 text-center bg-greylight rounded-3 mb-2">
                                 <a
-                                    href="{{ route('productDetails', ['id_product' => $product->id_product, 'name_product' => urlencode($product->name)]) }}"><img
+                                    href="{{ route('productDetails', ['id' => $product->id, 'name_product' => urlencode($product->name)]) }}"><img
                                         src="../images/pp-9.png" alt="product-image" class="w-100 mt-0 mb-0 p-5"></a>
                             </div>
                             <div class="card-body w-100 p-0 text-center">
@@ -51,7 +51,7 @@
 
                                     @foreach ($product_variations as $variation)
                                         {{-- Kiểm tra nếu biến thể sản phẩm thuộc về sản phẩm hiện tại --}}
-                                        @if ($variation->id_product == $product->id_product)
+                                        @if ($variation->id_product == $product->id)
                                             {{-- So sánh giá trị của biến thể sản phẩm với giá trị nhỏ nhất hiện tại --}}
                                             @php
                                                 $priceToDisplay =
@@ -65,7 +65,6 @@
 
                                     {{-- Hiển thị giá trị nhỏ nhất --}}
                                     <span class="text-red">{{ number_format($minPrice, 0, ',', '.') }} VNĐ</span>
-
                                 </h6>
                             </div>
                         </div>

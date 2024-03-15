@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductVariations extends Model
+class Comments extends Model
 {
     use HasFactory;
+
+    protected $table = 'comments';
+    
     protected $fillable = [
         'id',
         'id_product',
-        'name',
-        'quantity',
-        'price',
-        'sale_price',
+        'id_user ',
+        'content',
         'status',
         'create_date',
         'update_date',
-        'image',
     ];
 }

@@ -11,6 +11,6 @@ class Product extends Model
     protected $table = 'products';
     public function store()
     {
-        return $this->belongsTo(Store::class, 'id_store', 'id_store');
+        return $this->belongsTo(Store::class, 'id_store', 'id');
     }
 }

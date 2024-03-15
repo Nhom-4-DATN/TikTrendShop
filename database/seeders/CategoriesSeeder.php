@@ -15,7 +15,7 @@ class CategoriesSeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'id_category' => 1,
+                'id' => 1,
                 'id_parent' => 0,
                 'name' => 'Thời trang',
                 'description' => null,
@@ -24,7 +24,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 2,
+                'id' => 2,
                 'id_parent' => 1,
                 'name' => 'Quần',
                 'description' => null,
@@ -33,7 +33,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 3,
+                'id' => 3,
                 'id_parent' => 1,
                 'name' => 'Áo',
                 'description' => null,
@@ -42,7 +42,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 4,
+                'id' => 4,
                 'id_parent' => 0,
                 'name' => 'Điện tử',
                 'description' => null,
@@ -51,7 +51,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 5,
+                'id' => 5,
                 'id_parent' => 1,
                 'name' => 'Máy tính',
                 'description' => null,
@@ -60,7 +60,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 6,
+                'id' => 6,
                 'id_parent' => 1,
                 'name' => 'Laptop',
                 'description' => null,
@@ -69,7 +69,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 7,
+                'id' => 7,
                 'id_parent' => 0,
                 'name' => 'Làm đẹp',
                 'description' => null,
@@ -78,7 +78,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 8,
+                'id' => 8,
                 'id_parent' => 1,
                 'name' => 'Son',
                 'description' => null,
@@ -87,7 +87,7 @@ class CategoriesSeeder extends Seeder
                 'updated_at'=> null
             ],
             [
-                'id_category' => 9,
+                'id' => 9,
                 'id_parent' => 1,
                 'name' => 'Phấn má hồng',
                 'description' => null,

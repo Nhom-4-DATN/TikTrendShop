@@ -11,6 +11,7 @@ class Blog extends Model
     protected $table = 'blogs';
     protected $primaryKey = "id";
     protected $fillable = [
+        'id',
         'id_store',
         'id_categories_blog',
         'title',

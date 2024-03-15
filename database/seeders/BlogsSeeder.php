@@ -17,7 +17,7 @@ class BlogsSeeder extends Seeder
 
         DB::table('blogs')->insert([
             [
-                'id_blog' => 1,
+                'id' => 1,
                 'id_store' => 1,
                 'id_categories_blog' => 1,
                 'title' => 'Chọn áo croptop như thế nào cho phù hợp',
@@ -68,7 +68,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 2,
+                'id' => 2,
                 'id_store' => 1,
                 'id_categories_blog' => 2,
                 'title' => 'Chọn quần jeans như thế nào cho phù hợp',
@@ -116,7 +116,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 3,
+                'id' => 3,
                 'id_store' => 1,
                 'id_categories_blog' => 3,
                 'title' => 'Chọn áo sơ mi như thế nào cho phù hợp',
@@ -165,7 +165,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 4,
+                'id' => 4,
                 'id_store' => 2,
                 'id_categories_blog' => 4,
                 'title' => 'Chọn son như thế nào cho phù hợp với màu da',
@@ -214,7 +214,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 5,
+                'id' => 5,
                 'id_store' => 2,
                 'id_categories_blog' => 5,
                 'title' => 'Chọn phấn mà hồng như thế nào cho phù hợp với màu da',
@@ -274,7 +274,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 6,
+                'id' => 6,
                 'id_store' => 2,
                 'id_categories_blog' => 6,
                 'title' => 'Chọn sơn móng tay như thế nào cho phù hợp với màu da tay',
@@ -334,7 +334,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 7,
+                'id' => 7,
                 'id_store' => 3,
                 'id_categories_blog' => 7,
                 'title' => 'Chọn Laptop phù hợp với ngành đang học',
@@ -393,7 +393,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 8,
+                'id' => 8,
                 'id_store' => 3,
                 'id_categories_blog' => 8,
                 'title' => 'Chọn PC phù hợp với công việc',
@@ -455,7 +455,7 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id_blog' => 9,
+                'id' => 9,
                 'id_store' => 3,
                 'id_categories_blog' => 9,
                 'title' => 'Chọn keo tản nhiệt phù hợp với CPU',

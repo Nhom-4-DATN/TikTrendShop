@@ -60,25 +60,34 @@
                                             </div>
                                         @endif
                                     </td>
-                                    <td>{{ $categoryBlog->has_many_blogs_count }}</td>
-                                    <td>{{ date($categoryBlog->created_at) }}</td>
-                                    <td>{{ $categoryBlog->status !== 1 ? 'Ẩn' : 'Hiển thị' }}</td>
-                                    <td>
-                                        <div class="d-flex justify-content-end ">
-                                            <form action="{{ route('manager.category.delete', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" method="POST">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-danger">
-                                                    <i class="bi  bi-trash3 fs-6 "></i>
-                                                    <span class="ms-1">Xóa</span>
-                                                </button>
-                                            </form>
-                                            <a href="{{ route('manager.category.update', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" class="btn btn-warning ms-2">
-                                                <i class="bi bi-pencil-square"></i>
-                                                <span class="ms-1">Sửa</span>
-                                            </a>
-                                        </div>
-                                    </td>
+                                    <<<<<<< HEAD <td>{{ $categoryBlog->has_many_blogs_count }}</td>
+                                        =======
+                                        <td>0</td>
+                                        >>>>>>> 4394e39d3f6869296af162273fdeb10b1073e41f
+                                        <td>{{ date($categoryBlog->created_at) }}</td>
+                                        <td>{{ $categoryBlog->status !== 1 ? 'Ẩn' : 'Hiển thị' }}</td>
+                                        <td>
+                                            <div class="d-flex justify-content-end ">
+                                                <<<<<<< HEAD <form action="{{ route('manager.category.delete', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" method="POST">
+                                                    =======
+                                                    <form action="{{ route('manager.blog.category.delete', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" method="POST">
+                                                        >>>>>>> 4394e39d3f6869296af162273fdeb10b1073e41f
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="bi  bi-trash3 fs-6 "></i>
+                                                            <span class="ms-1">Xóa</span>
+                                                        </button>
+                                                    </form>
+                                                    <<<<<<< HEAD <a href="{{ route('manager.category.update', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" class="btn btn-warning ms-2">
+                                                        =======
+                                                        <a href="{{ route('manager.blog.category.update', ['slug' => $categoryBlog->slug, 'id' => $categoryBlog->id]) }}" class="btn btn-warning ms-2">
+                                                            >>>>>>> 4394e39d3f6869296af162273fdeb10b1073e41f
+                                                            <i class="bi bi-pencil-square"></i>
+                                                            <span class="ms-1">Sửa</span>
+                                                        </a>
+                                            </div>
+                                        </td>
                                 </tr>
                                 @if (count($categoryBlog->children) > 0)
                                     @include('pages.category-blog.SubTable', ['level' => '--', 'data' => $categoryBlog->children])

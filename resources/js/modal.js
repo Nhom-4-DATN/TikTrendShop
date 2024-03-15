@@ -1,9 +1,5 @@
 import $ from "jquery";
 import { Modal } from 'bootstrap';
-
-
-
-
 const modalLocation = new Modal('#modal-location');
 const modalMessage = new Modal(idModalMessage);
 

@@ -18,7 +18,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 1,
                 'id_store' => 3,
-                'id' => 8,
+                'id_user' => 8,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -26,7 +26,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 2,
                 'id_store' => 3,
-                'id' => 6,
+                'id_user' => 6,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -34,7 +34,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 3,
                 'id_store' => 2,
-                'id' => 7,
+                'id_user' => 7,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -42,7 +42,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 4,
                 'id_store' => 3,
-                'id' => 7,
+                'id_user' => 7,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -50,7 +50,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 5,
                 'id_store' => 3,
-                'id' => 1,
+                'id_user' => 1,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -58,7 +58,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 6,
                 'id_store' => 3,
-                'id' => 9,
+                'id_user' => 9,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -66,7 +66,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 7,
                 'id_store' => 3,
-                'id' => 10,
+                'id_user' => 10,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -74,7 +74,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 8,
                 'id_store' => 2,
-                'id' => 10,
+                'id_user' => 10,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -82,7 +82,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 9,
                 'id_store' => 2,
-                'id' => 11,
+                'id_user' => 11,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
@@ -90,7 +90,7 @@ class FollowsSeeder extends Seeder
             [
                 'id' => 10,
                 'id_store' => 3,
-                'id' => 11,
+                'id_user' => 11,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
