@@ -4,11 +4,11 @@
         <div class="card shadow-sm mb-4">
             <div class="flex justify-content-between py-3 px-4">
                 <div class="flex">
-                    <a href="{{ route('manager.category.index') }}" class="btn btn-primary">
+                    <a href="{{ route('manager.category-blog.index') }}" class="btn btn-primary">
                         <i class="bi bi-plus-circle fs-4 "></i>
                         <span class="ms-2">Quay lại</span>
                     </a>
-                    <a href="{{ route('manager.category.create') }}" class="btn btn-primary me-2">
+                    <a href="{{ route('manager.category-blog.create') }}" class="btn btn-primary me-2">
                         <i class="bi bi-plus-circle fs-4 "></i>
                         <span class="ms-2">Tạo mới</span>
                     </a>

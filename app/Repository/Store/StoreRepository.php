@@ -2,8 +2,10 @@
 
 namespace App\Repository\Store;
 
+use App\Http\Requests\ValidateFormStoreCU;
 use App\Models\Stores;
 use App\Models\User;
+use Flasher\Laravel\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -37,11 +39,12 @@ class StoreRepository
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             $thumb_url =  $file->storeAs('uploads', $fileName, 'public');
         }
+        $address = join(',', $req->address) . ',' . $req->address_detail;
         $store->update([
             'name' => $req->name_shop,
             'phone' => $req->phone_number,
             'description' => $req->description,
-            'address' =>  $req->address ?? $store->address,
+            'address' =>  $address ?? $store->address,
             'thumb_url' => $thumb_url ?? $store->thumb_url,
             'email' => $req->email
         ]);

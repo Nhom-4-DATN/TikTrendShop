@@ -28,14 +28,16 @@ Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
     Route::controller(StoresController::class)->group(function () {
         // trang chủ cửa hàng
         Route::get('/', 'index')->name('manager.shop')->middleware('storeMiddleware');
-        Route::get('logout-store', 'logout')->name('manager.shop.logout')->middleware('storeMiddleware');
         Route::prefix('shop')->group(function () {
+
             Route::match(['GET', 'POST'], 'register', request()->isMethod('get') ? 'registerShop' : 'register')->name('register.shop');
             Route::match(['GET', 'POST'], 'register/address', request()->isMethod('get') ? 'registerAddress' : 'register')->name('shop.register-address');
+
             Route::get('register/address-offline-shop', 'addressOffline')->name('shop.register-address-offline');
-            Route::get('{slug}', 'detail')->name('manager.shop-detail');
-            Route::put('{slug}', 'update')->name('manager.update.shop');
             Route::put('register/address-offline/{id}', 'UpdateAddressOffline')->name('manager.shop-update');
+
+            Route::get('{slug}', 'detail')->name('manager.shop-detail')->middleware('storeMiddleware');
+            Route::put('{slug}', 'update')->name('manager.update.shop')->middleware('storeMiddleware');
         });
     });
 });

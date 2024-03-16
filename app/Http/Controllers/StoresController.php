@@ -10,8 +10,6 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Repository\Store\StoreRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
 
 class StoresController extends Controller
 {

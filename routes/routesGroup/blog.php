@@ -13,5 +13,5 @@ Route::controller(BlogController::class)->group(function () {
         Route::delete('destroy', 'destroy')->name('destroy');
         Route::match(['get', 'post'], 'create', request()->isMethod('get') ? 'form' : 'create')->name('create');
         Route::match(['get', 'put'], 'update/{id}', request()->isMethod('get') ? 'form' : 'edit')->name('update');
-    });
+    })->middleware('storeMiddleware');
 });

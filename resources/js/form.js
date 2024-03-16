@@ -37,16 +37,16 @@ $(document).ready(function() {
     $(document).on('change', '.show-select-provinces', function() {
         const id = $(this).find('option:selected').data('id')
         if (id) {
-            $(this).prop('disabled', true);
+            $('.address-input').prop('disabled', true);
             $.ajax({
                 url: provinces_url + '?id_provinces=' + id,
                 method: 'GET',
                 success: function(responseHTML) {
                     $('.provinces').html(responseHTML);
-                    $(this).prop('disabled', false);
+                    $('.address-input').prop('disabled', false);
                 },
                 error: function(responseHTML) {
-                    $(this).prop('disabled', false);
+                    $('.address-input').prop('disabled', false);
                 }
             })
         }
@@ -55,16 +55,16 @@ $(document).ready(function() {
         const id_provinces = $('.show-select-provinces').find('option:selected').data('id')
         const id_district = $(this).find('option:selected').data('id')
         if (id_district) {
-            $(this).prop('disabled', true);
+           $('.address-input').prop('disabled', true);
             $.ajax({
                 url: provinces_url + '?id_provinces=' + id_provinces + '&id_district=' + id_district,
                 method: 'GET',
                 success: function(responseHTML) {
                     $('.provinces').html(responseHTML);
-                    $(this).prop('disabled', false);
+                   $('.address-input').prop('disabled', false);
                 },
                 error: function(responseHTML) {
-                    $(this).prop('disabled', false);
+                   $('.address-input').prop('disabled', false);
                 }
             })
         }

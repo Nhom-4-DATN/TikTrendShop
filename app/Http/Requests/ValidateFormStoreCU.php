@@ -23,7 +23,6 @@ class ValidateFormStoreCU extends FormRequest
         }
         $this->merge([
             'slug' => Str::slug($this->name_shop),
-            'address' => $address ?? ''
         ]);
     }
     /**

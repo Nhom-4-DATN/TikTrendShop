@@ -28,7 +28,7 @@ class selectProvinces extends Component
         if (!empty($this->address)) {
             $arr = explode(',', $this->address);
             $addressDetail =  array_pop($arr);
-            $res = Http::get($this->apiProvinces . 'wards/?search=' . $arr[2] . '&limit=100');
+            $res = Http::get($this->apiProvinces . 'wards/?search=' . ($arr[2] ?? '') . '&limit=100');
             $data = $res->json();
             if (!empty($data['results']) && count($data['results']) > 0) {
                 foreach ($data['results'] as $wards) {

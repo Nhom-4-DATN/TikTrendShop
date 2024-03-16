@@ -1,4 +1,4 @@
-<x-form.index class="form-submit" action="{{ !empty($categoryBlog->id) ? route('manager.category.update', ['id' => $categoryBlog->id, 'slug' => $categoryBlog->slug]) : route('manager.category.create') }}" :method="!empty($categoryBlog->id) ? 'PUT' : 'POST'">
+<x-form.index class="form-submit" action="{{ !empty($categoryBlog->id) ? route('manager.category-blog.update', ['id' => $categoryBlog->id, 'slug' => $categoryBlog->slug]) : route('manager.category-blog.create') }}" :method="!empty($categoryBlog->id) ? 'PUT' : 'POST'">
     <div>
         <x-form.input lable="tên danh mục" id="name" name="name" value="{{ $categoryBlog->name ?? old('name') }}" />
     </div>

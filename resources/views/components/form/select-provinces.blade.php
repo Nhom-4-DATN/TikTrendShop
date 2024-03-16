@@ -4,7 +4,7 @@
             <div class="form-labe">Địa chỉ</div>
         </div>
         <div class="col-4">
-            <x-form.select :name="'address[]'" class="show-select-provinces">
+            <x-form.select :name="'address[]'" class="show-select-provinces address-input">
                 <option value="" selected> Tỉnh/TP </option>
                 @foreach ($provinces as $province)
                     @php
@@ -15,7 +15,7 @@
             </x-form.select>
         </div>
         <div class="col-4">
-            <x-form.select :name="'address[]'" :disabled="count($districts) > 0 ? false : true" class="show-select-district">
+            <x-form.select :name="'address[]'" :disabled="count($districts) > 0 ? false : true" class="show-select-district address-input">
                 <option value="" selected>Quận/Huyện</option>
                 @foreach ($districts as $district)
                     @php
@@ -26,7 +26,7 @@
             </x-form.select>
         </div>
         <div class="col-4">
-            <x-form.select :name="'address[]'" :disabled="count($wards) > 0 ? false : true" class="show-select-wards">
+            <x-form.select :name="'address[]'" :disabled="count($wards) > 0 ? false : true" class="show-select-wards address-input">
                 <option value="" selected>Phường/Xã</option>
                 @foreach ($wards as $ward)
                     @php
@@ -45,6 +45,6 @@
         </div>
     </div>
     <div class="mt-3">
-        <x-form.input :name="'address_detail'" :lable="'địa chỉ chi tiết'" maxlength="255" :value="$addressActive['addressDetail'] ?? ''" />
+        <x-form.input class="address-input" :name="'address_detail'" :lable="'địa chỉ chi tiết'" maxlength="255" :value="$addressActive['addressDetail'] ?? ''" />
     </div>
 </div>

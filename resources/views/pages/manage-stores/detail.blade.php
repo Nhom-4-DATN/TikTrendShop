@@ -64,3 +64,6 @@
         </div>
     </div>
 @endsection
+<script>
+    const provinces_url = "{{ route('components.render-provinces') }}";
+</script>
