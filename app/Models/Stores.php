@@ -11,7 +11,20 @@ class Stores extends Model
 {
     protected $primaryKey = "id";
     protected $fillable = [
-        'id', 'thumb_url', 'slug', 'id_user', 'phone', 'name', 'address', 'status', 'follows', 'description', 'image_arr', 'created_at', 'updated_at'
+        'id',
+        'thumb_url',
+        'email',
+        'slug',
+        'id_user',
+        'phone',
+        'name',
+        'address',
+        'status',
+        'follows',
+        'description',
+        'image_arr',
+        'created_at',
+        'updated_at',
     ];
 
     function categoryBlogList(): HasMany
@@ -26,5 +39,6 @@ class Stores extends Model
     {
         return $this->hasMany(Blog::class, 'id_store');
     }
+
     use HasFactory;
 }

@@ -17,10 +17,12 @@ return new class extends Migration
             $table->unsignedInteger('id_category')->nullable(false);
             $table->string('name', 255)->nullable(false);
             $table->text('description')->nullable(false);
-            $table->tinyInteger('status')->nullable(false)->default(1); //0 ẩn, 1 hiện
+            $table->boolean('status')->nullable(false)->default(true); //true hiện, false ẩn
             $table->date('create_date')->nullable(false);
             $table->date('update_date')->nullable();
+            $table->text('banner')->nullable(false);
             $table->text('image_arr')->nullable(false);
+            $table->bigInteger('view_count')->default(0);
             $table->timestamps();
 
             $table->foreign('id_store')->references('id')->on('stores');

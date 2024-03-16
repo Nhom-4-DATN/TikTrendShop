@@ -8,10 +8,8 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ProductsController;
 //
 use App\Http\Controllers\AddressController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryBlogController;
 use App\Http\Controllers\ComponentController;
-use App\Http\Controllers\ManagerStores\StoresController;
+use App\Http\Controllers\StoresController;
 
 use App\Http\Controllers\CommentController;
 
@@ -26,26 +24,32 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::middleware(['auth'])->group(function () {
-    Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
-        Route::controller(StoresController::class)->group(function () {
-            // trang chủ cửa hàng
-            Route::get('/', 'index')->name('manager.shop');
-            Route::prefix('shop')->group(function () {
-                //  đăng ký cửa hàng
-                Route::get('register',  'formCU')->name('register.shop');
-                Route::post('register', 'register')->name('register.shop');
-                // cập nhập cửa hàng
-                Route::get('{slug}', 'detail')->name('manager.shop-detail');
-                Route::put('update/{slug}', 'update')->name('manager.update.shop');
-            });
+Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
+    Route::controller(StoresController::class)->group(function () {
+        // trang chủ cửa hàng
+        Route::get('/', 'index')->name('manager.shop')->middleware('storeMiddleware');
+        Route::get('logout-store', 'logout')->name('manager.shop.logout')->middleware('storeMiddleware');
+        Route::prefix('shop')->group(function () {
+            Route::match(['GET', 'POST'], 'register', request()->isMethod('get') ? 'registerShop' : 'register')->name('register.shop');
+            Route::match(['GET', 'POST'], 'register/address', request()->isMethod('get') ? 'registerAddress' : 'register')->name('shop.register-address');
+            Route::get('register/address-offline-shop', 'addressOffline')->name('shop.register-address-offline');
+            Route::get('{slug}', 'detail')->name('manager.shop-detail');
+            Route::put('{slug}', 'update')->name('manager.update.shop');
+            Route::put('register/address-offline/{id}', 'UpdateAddressOffline')->name('manager.shop-update');
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/welcome', function () {
-    return view('welcome');
-})->name('welcome');
 Route::auth();
 
 Route::middleware(['auth'])->group(function () {
@@ -66,15 +70,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/products/{id_product}/{name_product}/comment', [CommentController::class, 'comment'])->name('product.comment');
 });
 
-Route::prefix('address')->controller(AddressController::class)->group(function () {
-    Route::get('create', 'formCU')->name('address.create');
-    Route::post('create', 'create')->name('address.create');
 
-    Route::get('update/{id}', 'formCU')->name('address.update');
-    Route::put('update/{id}', 'update')->name('address.update');
-
-    Route::delete('delete/{id}', 'delete')->name('address.delete');
-});
 
 
 

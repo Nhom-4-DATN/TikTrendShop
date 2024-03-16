@@ -6,11 +6,9 @@ use App\Http\Requests\ValidateFormStoreCU;
 use App\Models\Stores;
 use Exception;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -21,16 +19,25 @@ class StoresController extends Controller
     {
         $this->storesModel = new Stores();
     }
+
+
     function index()
     {
         $store = $this->storesModel->where('id_user', '=', Auth::id())->first();
         return view('pages.manage-stores.index', ['store' => $store]);
     }
-    function formCU()
+
+
+    function registerShop()
     {
         if (!empty(User::find(Auth::id())->oneStore)) return redirect(route('manager.shop'));
-        return view('pages.manage-stores.register', ['store' => $store ?? []]);
+        return view('pages.manage-stores.register.register-shop', ['store' => $store ?? []]);
     }
+    function registerAddress()
+    {
+        return view('pages.manage-stores.register.register-address');
+    }
+
     function register(ValidateFormStoreCU $req)
     {
         try {
@@ -43,16 +50,20 @@ class StoresController extends Controller
                 'name' => $req->name_shop,
                 'phone' => $req->phone_number,
                 'description' => $req->description,
-                'address' => join(",", $req->address),
                 'slug' => $req->slug,
-                'thumb_url' => $thumb_url,
+                'thumb_url' => $thumb_url ?? '12',
                 'id_user' => Auth::id(),
+                'email' => $req->email
             ]);
-            return redirect(route('manager.shop'));
+            return redirect(route('shop.register-address'));
         } catch (Exception $e) {
-            return response()->json($e->getMessage());
+            toastr()->success($e->getMessage(), 'Lỗi');
+            return back();
         }
     }
+
+
+
     function detail(Request $req, $slug)
     {
         $store = $this->storesModel->where('slug', '=', $req->slug)->first();
@@ -63,8 +74,6 @@ class StoresController extends Controller
         try {
             $store = $this->storesModel->where('slug', $slug)->first();
             if ($req->hasFile('thumb_image')) {
-                echo 1;
-                die;
                 if (Storage::exists('public/' . $store->thumb_url)) {
                     Storage::delete('public/' . $store->thumb_url);
                 }
@@ -77,12 +86,43 @@ class StoresController extends Controller
                 'phone' => $req->phone_number,
                 'description' => $req->description,
                 'address' =>  join(', ', $req->address) . ',' . $req->address_detail ?? $store->address,
-                'thumb_url' => $thumb_url ?? $store->thumb_url
+                'thumb_url' => $thumb_url ?? $store->thumb_url,
+                'email' => $req->email
             ]);
-            return back()->with(['success' => 'cập nhập thành công']);
+            toastr()->success('cập nhập thành công', 'Cập nhập thông tin shop');
+            return back();
         } catch (Exception $e) {
-            echo $e->getMessage();
-            die;
+            toastr()->error('cập nhập thất bại', 'Cập nhập thông tin shop');
+            return back();
+        }
+    }
+    function UpdateAddressOffline($id, Request $req)
+    {
+        try {
+
+            $address = join(',', $req->address) . ',' . $req->address_detail;
+            $store = User::find(Auth::id())->oneStore;
+            $store->update([
+                'address' => $address,
+            ]);
+            toastr()->success('Bạn đã trời thành người bán hàng của TikTrendShop', 'chào mừng');
+            return redirect(route('manager.shop'));
+        } catch (Exception $e) {
+            toastr()->error($e->getMessage(), 'Lỗi');
+            return back();
+        }
+    }
+    function addressOffline()
+    {
+        try {
+            if (User::find(Auth::id())->hasManyAddresses->count() <= 0) {
+                throw new Exception('bạn phải có vị trí gia và trả hàng');
+            }
+            $store = User::find(Auth::id())->oneStore;
+            return view('pages.manage-stores.register.register-address-shop', ['store' => $store]);
+        } catch (Exception $e) {
+            toastr()->error($e->getMessage(), 'Lỗi');
+            return back();
         }
     }
 }

@@ -36,10 +36,6 @@ class ValidateFormStoreCU extends FormRequest
             'phone_number' => ['required', 'max:13', 'unique:stores,phone' . $idStore],
             'slug' => ['unique:stores,slug' . $idStore],
         ];
-        if ($this->method() == 'POST') {
-            $validate['address'] =  ['required', 'min:3'];
-            $validate['address_detail'] = ['required'];
-        }
         return $validate;
     }
     public function messages()

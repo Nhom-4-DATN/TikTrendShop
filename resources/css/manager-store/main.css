@@ -20,16 +20,7 @@ html {
     inset: 0;
     position: absolute;
 }
-.location {
-    display: flex;
-    padding: 20px 32px 20px 40px;
-    align-items: center;
-    justify-content: center;
-}
-.location .content {
-    flex: 1;
-    margin-left: 32px;
-}
+
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -39,4 +30,15 @@ html {
 
 .hedden-scroll::-webkit-scrollbar {
     width: 0;
+}
+.location {
+    display: flex;
+    padding: 20px 32px 20px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.location .content {
+    flex: 1;
+    margin-left: 32px;
 }

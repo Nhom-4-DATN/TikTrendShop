@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('update_date')->nullable();
             $table->text('image')->nullable(false);
             $table->timestamps();
-
             $table->foreign('id_product')->references('id')->on('products');
         });
     }
