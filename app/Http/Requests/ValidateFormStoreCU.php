@@ -18,8 +18,12 @@ class ValidateFormStoreCU extends FormRequest
     }
     protected function prepareForValidation()
     {
+        if (!empty($this->address)) {
+            $address = join(',', $this->address) . "." . $this->address_detail;
+        }
         $this->merge([
             'slug' => Str::slug($this->name_shop),
+            'address' => $address ?? ''
         ]);
     }
     /**

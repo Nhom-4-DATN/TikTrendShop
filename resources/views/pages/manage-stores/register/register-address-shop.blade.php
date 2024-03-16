@@ -16,7 +16,7 @@
             </li>
             <li class="step0 text-right" id="step4">
                 <i class="bi bi-shop"></i>
-                <p class="fs-5 mt-0 fw-light ">Hoàng thành </p>
+                <p class="fs-5 mt-0 fw-light text-end">Hoàng thành </p>
             </li>
         </ul>
     </div>

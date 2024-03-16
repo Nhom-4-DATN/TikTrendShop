@@ -43,7 +43,7 @@
                     <x-form.input :name="'phone_number'" :lable="'số điện thoại'" maxlength="30" :value="$store['phone'] ?? ''" />
                 </div>
                 <div class="mt-3">
-                    <x-form.input :name="'email'" :lable="'email'" maxlength="30" :value="$store['email'] ?? Auth::user()->email" />
+                    <x-form.input :name="'email'" :lable="'email'" :value="$store['email'] ?? Auth::user()->email" />
                 </div>
                 <div class="mt-3">
                     <x-form.textarea :lable="'mô tả cửa hàng'" :maxlength="250" :name="'description'" :value="$store['description'] ?? ''" :style="'height:150px'" />
