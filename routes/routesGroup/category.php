@@ -9,5 +9,5 @@ Route::controller(CategoryBlogController::class)->group(function () {
         Route::match(['get', 'post'], 'create', request()->isMethod('get') ? 'form' : 'create')->name('create');
         Route::match(['get', 'put'], 'update/{slug}_{id}', request()->isMethod('get') ? 'form' : 'edit')->name('update');
         Route::delete('delete/{id}', 'delete')->name('delete');
-    });
-});
+    })->middleware(['storeMiddleware']);
+})->middleware('auth');

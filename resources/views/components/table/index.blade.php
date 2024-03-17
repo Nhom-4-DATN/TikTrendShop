@@ -12,7 +12,7 @@
             @foreach ($titles as $header)
                 <th scope="col">
                     @if (!empty($header['filter']))
-                        <a class="filter-table text-black text-decoration-none "
+                        <a class="filter-table text-black text-decoration-none " style="{{ $header['style'] ?? '' }}"
                             href="{{ route('manager.blog.filter', ['order' => $header['filter'], 'by' => !empty($_GET['by']) && !empty($_GET['order']) && $header['filter'] == $_GET['order'] && $_GET['by'] == 'ASC' ? 'DESC' : 'ASC']) }}">
                             {{ $header['name'] }}
                             <i class="{{ !empty($_GET['by']) && !empty($_GET['order']) && $header['filter'] == $_GET['order'] && $_GET['by'] == 'ASC' ? 'bi bi-sort-alpha-down-alt' : 'bi bi-sort-alpha-up-alt' }}"></i>

@@ -27,19 +27,24 @@ use App\Http\Controllers\CommentController;
 Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
     Route::controller(StoresController::class)->group(function () {
         // trang chủ cửa hàng
-        Route::get('/', 'index')->name('manager.shop')->middleware('storeMiddleware');
+        Route::get('/', 'index')->name('manager.shop')->middleware(['auth', 'storeMiddleware']);
         Route::prefix('shop')->group(function () {
 
             Route::match(['GET', 'POST'], 'register', request()->isMethod('get') ? 'registerShop' : 'register')->name('register.shop');
             Route::match(['GET', 'POST'], 'register/address', request()->isMethod('get') ? 'registerAddress' : 'register')->name('shop.register-address');
+            Route::get('logout', 'logout')->name('shop.logout');
 
             Route::get('register/address-offline-shop', 'addressOffline')->name('shop.register-address-offline');
             Route::put('register/address-offline/{id}', 'UpdateAddressOffline')->name('manager.shop-update');
 
-            Route::get('{slug}', 'detail')->name('manager.shop-detail')->middleware('storeMiddleware');
-            Route::put('{slug}', 'update')->name('manager.update.shop')->middleware('storeMiddleware');
+            Route::get('{slug}', 'detail')->name('manager.shop-detail')->middleware(['auth', 'storeMiddleware']);
+            Route::put('{slug}', 'update')->name('manager.update.shop')->middleware(['auth', 'storeMiddleware']);
         });
     });
+
+    Route::get('order/chart', function () {
+        return view('pages.order.dashboard');
+    })->name('shop.manager.chart');
 });
 
 

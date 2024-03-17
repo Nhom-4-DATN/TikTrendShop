@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\SampleChart;
 use App\Http\Requests\ValidateFormStoreCU;
 use App\Models\Stores;
 use Exception;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Repository\Store\StoreRepository;
 use Illuminate\Http\Request;
+use ConsoleTVs\Charts\Facades\Charts;
 
 class StoresController extends Controller
 {
@@ -22,8 +24,11 @@ class StoresController extends Controller
     }
     function index()
     {
+        $chart = new SampleChart;
+        $chart->labels(['2 days ago', 'Yesterday', 'Today']);
+        $chart->dataset('My dataset', 'line', [0, 0, 0]);
         $store = $this->storesModel->where('id_user', '=', Auth::id())->first();
-        return view('pages.manage-stores.index', ['store' => $store]);
+        return view('pages.manage-stores.index', ['store' => $store, 'chart' => $chart]);
     }
     function registerShop()
     {
@@ -90,5 +95,10 @@ class StoresController extends Controller
             toastr()->error($e->getMessage(), 'Lỗi');
             return back();
         }
+    }
+    function logout()
+    {
+        Auth::logout();
+        return back();
     }
 }

@@ -58,46 +58,13 @@ class SidebarManagerStoresMenus extends Component
                         'title' => 'đơn hàng đã hủy',
                         'icon' => '',
                         'url' => '',
+                    ], [
+                        'title' => 'Biểu đồ ',
+                        'icon' => '',
+                        'url' => route('shop.manager.chart'),
                     ]
                 ]
             ],
-            [
-                'title' => 'Thông kê',
-                'icon' => '',
-                'url' => '',
-                'id' => 1,
-                'children' => [
-                    [
-                        'title' => 'Tất cả',
-                        'icon' => '',
-                        'url' => '',
-                    ],
-                    [
-                        'title' => 'tạo sản phẩm',
-                        'icon' => '',
-                        'url' => '',
-                    ]
-                ]
-            ],
-            [
-                'title' => 'Danh thu',
-                'icon' => '',
-                'url' => '',
-                'id' => 1,
-                'children' => [
-                    [
-                        'title' => 'Tất cả',
-                        'icon' => '',
-                        'url' => '',
-                    ],
-                    [
-                        'title' => 'tạo sản phẩm',
-                        'icon' => '',
-                        'url' => '',
-                    ]
-                ]
-            ],
-
             [
                 'id' => 3,
                 'title' => 'Quản lý bài đăng',
@@ -122,7 +89,7 @@ class SidebarManagerStoresMenus extends Component
                 ]
             ],
             [
-                'id' => 3,
+                'id' => 4,
                 'title' => 'Quản lý vorcher',
                 'icon' => '',
                 'url' => '',
@@ -140,7 +107,7 @@ class SidebarManagerStoresMenus extends Component
                 ]
             ],
             [
-                'id' => 2,
+                'id' => 6,
                 'title' => 'thiết lập',
                 'icon' => '',
                 'url' => '',
@@ -158,7 +125,6 @@ class SidebarManagerStoresMenus extends Component
                 ]
             ],
         ];
-
         return view('components.sidebar.sidebar-manager-stores-menus', ['menus' => $menus]);
     }
 }
