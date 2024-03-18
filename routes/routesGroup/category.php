@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryBlogController;
 use Illuminate\Support\Facades\Route;
 
+//  route : /address
 Route::controller(CategoryBlogController::class)->group(function () {
     Route::domain('shop.' . env("APP_DOMAIN"))->name('manager.category-blog.')->group(function () {
         Route::get('/', 'index')->name('index');

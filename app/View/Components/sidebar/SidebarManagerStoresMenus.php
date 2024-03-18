@@ -50,18 +50,19 @@ class SidebarManagerStoresMenus extends Component
                 'url' => '',
                 'children' => [
                     [
-                        'title' => 'Tất Cả',
+                        'title' => 'Biểu đồ ',
                         'icon' => '',
-                        'url' => '',
+                        'url' => route('order.manager.chart'),
+                    ],
+                    [
+                        'title' => 'Đơn hàng',
+                        'icon' => '',
+                        'url' => route("order.manager.index"),
                     ],
                     [
                         'title' => 'đơn hàng đã hủy',
                         'icon' => '',
                         'url' => '',
-                    ], [
-                        'title' => 'Biểu đồ ',
-                        'icon' => '',
-                        'url' => route('shop.manager.chart'),
                     ]
                 ]
             ],

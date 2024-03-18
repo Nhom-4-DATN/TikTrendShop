@@ -12,6 +12,7 @@ use App\Http\Controllers\ComponentController;
 use App\Http\Controllers\StoresController;
 
 use App\Http\Controllers\CommentController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +25,10 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
-    Route::controller(StoresController::class)->group(function () {
+Route::domain('shop.' . env("APP_DOMAIN"))->middleware('auth')->group(function () {
+    Route::controller(StoresController::class)->middleware('auth')->group(function () {
         // trang chủ cửa hàng
-        Route::get('/', 'index')->name('manager.shop')->middleware(['auth', 'storeMiddleware']);
+        Route::get('/', 'index')->name('manager.shop')->middleware('storeMiddleware');
         Route::prefix('shop')->group(function () {
 
             Route::match(['GET', 'POST'], 'register', request()->isMethod('get') ? 'registerShop' : 'register')->name('register.shop');
@@ -37,17 +38,16 @@ Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
             Route::get('register/address-offline-shop', 'addressOffline')->name('shop.register-address-offline');
             Route::put('register/address-offline/{id}', 'UpdateAddressOffline')->name('manager.shop-update');
 
-            Route::get('{slug}', 'detail')->name('manager.shop-detail')->middleware(['auth', 'storeMiddleware']);
-            Route::put('{slug}', 'update')->name('manager.update.shop')->middleware(['auth', 'storeMiddleware']);
+            Route::get('{slug}', 'detail')->name('manager.shop-detail')->middleware('storeMiddleware');
+            Route::put('{slug}', 'update')->name('manager.update.shop')->middleware('storeMiddleware');
         });
     });
-
-    Route::get('order/chart', function () {
-        return view('pages.order.dashboard');
-    })->name('shop.manager.chart');
 });
 
-
+Route::prefix('blog')->group(base_path('routes/routesGroup/blog.php'));
+Route::prefix('category')->group(base_path('routes/routesGroup/category.php'));
+Route::prefix('location')->group(base_path('routes/routesGroup/address.php'));
+Route::prefix('order')->group(base_path('routes/routesGroup/order.php'));
 
 
 

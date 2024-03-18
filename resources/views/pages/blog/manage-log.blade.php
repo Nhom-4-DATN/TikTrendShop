@@ -1,19 +1,6 @@
 @extends('layouts.manager-stores')
 
 @section('content')
-    <style>
-        .nav-tabs .nav-link {
-            border: none;
-            color: black;
-        }
-
-        .nav-tabs .nav-link.active {
-            background-color: transparent;
-            color: rgb(42, 60, 163);
-            outline: none;
-            border-bottom: 2px solid rgb(42, 60, 163);
-        }
-    </style>
     <div class="container">
         <div class="card shadow-sm mb-4">
             <form action="{{ route(Route::currentRouteName()) }}">

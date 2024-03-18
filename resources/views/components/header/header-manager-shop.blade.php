@@ -13,24 +13,35 @@
                             <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
                                 {{ Auth::user()->full_name }}
                             </button>
-                            <div class="dropdown-menu " style="width:250px; left: -100%;">
-                                <div class="d-flex justify-content-between align-items-center py-2 px-4 pb-3">
-                                    <div class="d-flex  align-items-center justify-content-start ">
-                                        <img src="{{ asset(Storage::url('public/' . $store->thumb_url)) }}" class="rounded-full float-start rounded-circle" alt="..." style="width: 40px; height:40px;">
-                                        <span class="fs-6 fw-bolder ms-2">{{ $store->name }}</span>
+                            @if (!empty($store))
+                                <div class="dropdown-menu " style="width:250px; left: -100%;">
+                                    <div class="d-flex justify-content-between align-items-center py-2 px-4 pb-3">
+                                        <div class="d-flex  align-items-center justify-content-start ">
+                                            <img src="{{ asset(Storage::url('public/' . $store->thumb_url)) }}" class="rounded-full float-start rounded-circle" alt="..." style="width: 40px; height:40px;">
+                                            <span class="fs-6 fw-bolder ms-2">{{ $store->name }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-group list-group-flush border-top">
+                                        <a href="{{ route('manager.shop-detail', $store->slug) }}" class="py-2 list-group-item list-group-item-action fw-bolder ">
+                                            <i class="bi bi-shop fs-4 "></i>
+                                            <span class="ms-2 fs-6 ">Hồ sơ cửa hàng</span>
+                                        </a>
+                                        <a href="{{ route('shop.logout') }}" class="list-group-item list-group-item-action  fw-bolder py-2">
+                                            <i class="bi bi-box-arrow-right fs-4 "></i>
+                                            <span class="ms-2 fs-6 ">Đang xuất</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="list-group list-group-flush border-top">
-                                    <a href="{{ route('manager.shop-detail', $store->slug) }}" class="py-2 list-group-item list-group-item-action fw-bolder ">
-                                        <i class="bi bi-shop fs-4 "></i>
-                                        <span class="ms-2 fs-6 ">Hồ sơ cửa hàng</span>
-                                    </a>
-                                    <a href="{{ route('shop.logout') }}" class="list-group-item list-group-item-action  fw-bolder py-2">
-                                        <i class="bi bi-box-arrow-right fs-4 "></i>
-                                        <span class="ms-2 fs-6 ">Đang xuất</span>
-                                    </a>
+                            @else
+                                <div class="dropdown-menu " style="width:250px; left: -100%;">
+                                    <div class="list-group list-group-flush border-top">
+                                        <a href="{{ route('shop.logout') }}" class="list-group-item list-group-item-action  fw-bolder py-2">
+                                            <i class="bi bi-box-arrow-right fs-4 "></i>
+                                            <span class="ms-2 fs-6 ">Đang xuất</span>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </li>
                 </ul>

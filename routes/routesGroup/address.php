@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Route;
 
+// route location
 Route::controller(AddressController::class)->group(function () {
 
     Route::domain('shop.' . env("APP_DOMAIN"))->group(function () {
