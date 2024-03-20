@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\CategoryBlog;
+use App\Models\Stores;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -14,12 +17,12 @@ class BlogsSeeder extends Seeder
      */
     public function run(): void
     {
-
+        $store = Stores::all();
+        $categoryBlog = CategoryBlog::all();
         DB::table('blogs')->insert([
             [
-                'id' => 1,
-                'id_store' => 1,
-                'id_categories_blog' => 1,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn áo croptop như thế nào cho phù hợp',
                 'content' => '<h1>Để chọn áo croptop phù hợp, bạn có thể xem xét các yếu tố sau đây:</h1>
                 <strong>Phù hợp với dáng vóc:</strong> Đầu tiên, hãy xem xét hình dáng cơ thể của bạn. Áo croptop có thể phù hợp với
@@ -68,9 +71,8 @@ class BlogsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 2,
-                'id_store' => 1,
-                'id_categories_blog' => 2,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn quần jeans như thế nào cho phù hợp',
                 'content' => '<h1>Để chọn quần jeans phù hợp, dưới đây là một số yếu tố bạn có thể xem xét:</h1>
                 <strong>Kiểu dáng và cắt may:</strong> Có nhiều kiểu dáng quần jeans khác nhau như quần skinny, quần cạp cao, quần
@@ -114,11 +116,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 3,
-                'id_store' => 1,
-                'id_categories_blog' => 3,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn áo sơ mi như thế nào cho phù hợp',
                 'content' => '<h1> Để chọn áo sơ mi phù hợp, dưới đây là một số yếu tố bạn có thể xem xét:</h1>
                 <strong>Kích cỡ và dáng áo:</strong> Đảm bảo chọn kích cỡ và dáng áo phù hợp với hình dáng cơ thể của bạn. Áo sơ mi
@@ -163,11 +165,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 4,
-                'id_store' => 2,
-                'id_categories_blog' => 4,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn son như thế nào cho phù hợp với màu da',
                 'content' => ' <h1>Khi chọn son phù hợp với màu da của bạn, có một số nguyên tắc bạn nên xem xét:</h1>
 
@@ -212,11 +214,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 5,
-                'id_store' => 2,
-                'id_categories_blog' => 5,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn phấn mà hồng như thế nào cho phù hợp với màu da',
                 'content' => ' <h1>Khi chọn phấn má hồng phù hợp với màu da của bạn, có một số nguyên tắc và gợi ý dưới đây:</h1>
                 <strong>Tông màu da:</strong> Xác định tông màu da của bạn là ấm hay lạnh. Điều này sẽ giúp bạn chọn được màu hồng
@@ -272,11 +274,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 6,
-                'id_store' => 2,
-                'id_categories_blog' => 6,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn sơn móng tay như thế nào cho phù hợp với màu da tay',
                 'content' => '<h1>Khi chọn sơn móng tay phù hợp với màu da tay của bạn, có một số yếu tố cần xem xét:</h1>
 
@@ -332,11 +334,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 7,
-                'id_store' => 3,
-                'id_categories_blog' => 7,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn Laptop phù hợp với ngành đang học',
                 'content' => '<h1>Khi chọn laptop phù hợp với ngành đang học, bạn cần xem xét các yếu tố sau:</h1>
 
@@ -391,11 +393,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 8,
-                'id_store' => 3,
-                'id_categories_blog' => 8,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn PC phù hợp với công việc',
                 'content' => '<h1>Khi chọn một PC phù hợp với công việc, có một số yếu tố quan trọng mà bạn nên xem xét:</h1>
 
@@ -453,11 +455,11 @@ class BlogsSeeder extends Seeder
                 ]',
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
+
             ],
             [
-                'id' => 9,
-                'id_store' => 3,
-                'id_categories_blog' => 9,
+                'id_store' => $store->random()->id,
+                'id_categories_blog' => $categoryBlog->random()->id,
                 'title' => 'Chọn keo tản nhiệt phù hợp với CPU',
                 'content' => '<h1>Khi chọn keo tản nhiệt cho CPU của bạn, có một số yếu tố mà bạn nên xem xét:</h1>
 

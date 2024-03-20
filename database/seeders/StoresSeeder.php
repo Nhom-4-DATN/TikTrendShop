@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -14,10 +15,10 @@ class StoresSeeder extends Seeder
      */
     public function run(): void
     {
+        $userId = User::all('id');
         DB::table('stores')->insert([
             [
-                'id' => 1,
-                'id_user' => 3,
+                'id_user' => $userId->random()->id,
                 'name' => 'Quần áo cho bạn',
                 'address' => 'Quận3, Hồ Chí Minh',
                 'status' => true,
@@ -36,8 +37,7 @@ class StoresSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 2,
-                'id_user' => 4,
+                'id_user' => $userId->random()->id,
                 'name' => 'Mỹ phẩm cho bạn',
                 'address' => 'Quận 4, Hồ Chí Minh',
                 'status' => true,
@@ -56,8 +56,7 @@ class StoresSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 3,
-                'id_user' => 7,
+                'id_user' => $userId->random()->id,
                 'name' => 'Laptop & PC cho bạn',
                 'address' => 'Quận 7, Hồ Chí Minh',
                 'status' => true,

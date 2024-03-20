@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Stores;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -14,11 +15,12 @@ class ProductsSeeder extends Seeder
      */
     public function run(): void
     {
+        $store = Stores::all();
+        $category = DB::table('categories')->select('*')->get();
         DB::table('products')->insert([
             [
-                'id' => 1,
-                'id_store' => 1,
-                'id_category' => 3,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Áo sơ mi',
                 'description' => '<h1>Giới thiệu Áo Sơ Mi Classic đa màu sắc</h1>
 
@@ -75,9 +77,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 2,
-                'id_store' => 1,
-                'id_category' => 2,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Quần jeans',
                 'description' => '<h1>Quần Jeans Màu Xanh</h1>
                 <h2>Bạn đang tìm kiếm một chiếc quần jeans vừa vặn và phong cách? Quần jeans màu xanh của chúng tôi là sự lựa chọn
@@ -117,9 +118,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 3,
-                'id_store' => 1,
-                'id_category' => 3,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Áo thun con mèo',
                 'description' => ' <h1>Áo Thun Con Mèo - Phong Cách Đáng Yêu và Thời Trang</h1>
                 <h4>Bạn đang tìm kiếm một chiếc áo thun đáng yêu và phong cách? Áo thun con mèo của chúng tôi sẽ là sự lựa chọn hoàn
@@ -165,9 +165,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 4,
-                'id_store' => 1,
-                'id_category' => 3,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Áo croptop đáng yêu',
                 'description' => ' <h3>Áo Croptop Đáng Yêu - Phong Cách Mới Mẻ và Tươi Trẻ</h3>
                 <p>Bạn muốn thêm sự tươi trẻ và phong cách mới mẻ vào tủ đồ của mình? Hãy đón nhận chiếc áo croptop đáng yêu của
@@ -220,9 +219,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 5,
-                'id_store' => 1,
-                'id_category' => 2,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Quần thể thao',
                 'description' => '<h3>Quần Thể Thao - Sự Kết Hợp Hoàn Hảo Giữa Phong Cách và Sự Thoải Mái</h3>
                 <p>Bạn đang tìm kiếm một chiếc quần thể thao vừa thời trang vừa thoải mái cho các hoạt động thể chất hàng ngày?
@@ -272,9 +270,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 6,
-                'id_store' => 3,
-                'id_category' => 6,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Asus gaming tuf f15 fx506lh',
                 'description' => ' <h3>ASUS Gaming TUF F15 FX506LH: Sức Mạnh và Độ Bền Cho Trải Nghiệm Gaming Hấp Dẫn</h3>
                 <h4>Thiết Kế Mạnh Mẽ và Cứng Cỏi:</h4>
@@ -317,9 +314,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 7,
-                'id_store' => 3,
-                'id_category' => 6,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Dell vostro 14 3000',
                 'description' => '<p>Dell Vostro 14 3000 là một trong những dòng laptop doanh nhân phổ thông của Dell, được thiết kế để đáp ứng
                 nhu cầu công việc hàng ngày của người dùng văn phòng và doanh nghiệp nhỏ. Dưới đây là một số điểm nổi bật và
@@ -358,9 +354,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 8,
-                'id_store' => 3,
-                'id_category' => 6,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Laptop HP VICTUS 15-fa1155TX 952R1PA',
                 'description' => '<h3>Laptop HP VICTUS 15-fa1155TX 952R1PA: Sức Mạnh và Độ Bền Cho Trải Nghiệm Gaming Chuyên Nghiệp</h3>
                 <h4>Hiệu Suất Mạnh Mẽ:</h4>
@@ -400,9 +395,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 9,
-                'id_store' => 3,
-                'id_category' => 5,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'PC Intel i3-12100F/ VGA GTX 1650',
                 'description' => '<h3>PC Intel i3-12100F / VGA GTX 1650: Sức Mạnh và Hiệu Năng Cho Trải Nghiệm Gaming và Công Việc</h3>
                 <h4>Hiệu Suất Ưu Việt:</h4>
@@ -442,9 +436,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 10,
-                'id_store' => 3,
-                'id_category' => 5,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'PC AMD R5-5600X/ VGA RX 6600',
                 'description' => '   <h3>PC AMD R5-5600X / VGA RX 6600: Sức Mạnh và Hiệu Năng Cho Trải Nghiệm Gaming Cao Cấp</h3>
                 <h4>Hiệu Suất Đỉnh Cao:</h4>
@@ -486,9 +479,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 11,
-                'id_store' => 3,
-                'id_category' => 5,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'PC Intel i5-12400F/ VGA RX 6600',
                 'description' => '<h3>PC Intel i5-12400F / VGA RX 6600: Sức Mạnh và Hiệu Năng Cho Trải Nghiệm Gaming và Công Việc</h3>
                 <h4>Hiệu Suất Mạnh Mẽ:</h4>
@@ -530,9 +522,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 12,
-                'id_store' => 2,
-                'id_category' => 8,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Son 3CE',
                 'description' => '  <p>3CE là một thương hiệu mỹ phẩm Hàn Quốc nổi tiếng, chuyên sản xuất các sản phẩm trang điểm chất lượng cao,
                 trong đó có son môi. Dưới đây là một số điểm nổi bật và thông tin về son 3CE:</p>
@@ -599,9 +590,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 13,
-                'id_store' => 2,
-                'id_category' => 8,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Son Dior Addict Lip Tattoo 541 Natural Sienna',
                 'description' => ' <p>Son Dior Addict Lip Tattoo 541 Natural Sienna là một sản phẩm trang điểm môi đẳng cấp từ thương hiệu Dior,
                 một trong những nhãn hiệu mỹ phẩm cao cấp và uy tín hàng đầu trên thị trường. Dưới đây là một số điểm nổi
@@ -653,9 +643,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 14,
-                'id_store' => 2,
-                'id_category' => 8,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Son Gucci The Painted Veil Rouge Mat Lipstick 201',
                 'description' => ' <h3>Son Gucci The Painted Veil Rouge Mat Lipstick 201: Sự Kết Hợp Hoàn Hảo Giữa Thời Trang và Mỹ Phẩm</h3>
                 <h4>1. Chất Lượng và Đẳng Cấp:</h4>
@@ -712,9 +701,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 15,
-                'id_store' => 2,
-                'id_category' => 9,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Phấn Má Hồng 3CE Màu Pure Cake - Hồng Đào Cực Baby',
                 'description' => '<h3>Phấn Má Hồng 3CE Màu Pure Cake - Hồng Đào Cực Baby: Sắc Hồng Tươi Sáng Cho Làn Da Tươi Tắn</h3>
                 <h4>1. Màu Sắc Tươi Sáng:</h4>
@@ -770,9 +758,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 16,
-                'id_store' => 2,
-                'id_category' => 9,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 219 Rose Montaigne',
                 'description' => ' <h3>Phấn Má Hồng Dior Rouge Blush 219 Rose Montaigne: Sắc Hồng Tinh Tế Cho Làn Da Lên Màu Tự Nhiên</h3>
                 <p>Phấn Má Hồng Dior Rouge Blush 219 Rose Montaigne là một sản phẩm trang điểm mang đậm dấu ấn của thương hiệu
@@ -813,9 +800,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 17,
-                'id_store' => 2,
-                'id_category' => 9,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Phấn Má Hồng Dior Rouge Blush 028 Actrice',
                 'description' => '<h3>Phấn Má Hồng Dior Rouge Blush 028 Actrice: Sắc Hồng Nữ Tính Cho Làn Da Sống Động</h3>
                 <p>Phấn Má Hồng Dior Rouge Blush 028 Actrice là một sản phẩm trang điểm vô cùng tinh tế từ thương hiệu mỹ phẩm
@@ -854,9 +840,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 18,
-                'id_store' => 1,
-                'id_category' => 2,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Quần thun đá banh',
                 'description' => '<h3>Quần Thun Đá Banh: Sự Lựa Chọn Hoàn Hảo Cho Các Hoạt Động Thể Thao</h3>
                 <p>Quần thun đá banh là một sản phẩm quan trọng không thể thiếu đối với những người yêu thích hoạt động thể
@@ -897,9 +882,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 19,
-                'id_store' => 1,
-                'id_category' => 2,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Quần âu dự tiệc',
                 'description' => '<h3>Quần Âu Dự Tiệc: Phong Cách Lịch Lãm và Sang Trọng</h3>
                 <p>Quần âu dự tiệc là một phần không thể thiếu trong tủ đồ của mọi quý ông khi họ cần diện trang phục lịch lãm
@@ -942,9 +926,8 @@ class ProductsSeeder extends Seeder
                 'updated_at' => null
             ],
             [
-                'id' => 20,
-                'id_store' => 1,
-                'id_category' => 3,
+                'id_store' => $store->random()->id,
+                'id_category' =>  $category->random()->id,
                 'name' => 'Áo khoác uniqlo',
                 'description' => '<h3>Áo Khoác Uniqlo: Sự Kết Hợp Hoàn Hảo Giữa Phong Cách và Tiện Ích</h3>
                 <p>Áo khoác Uniqlo là biểu tượng của sự đơn giản, tiện dụng và phong cách hiện đại. Với chất liệu chất lượng,

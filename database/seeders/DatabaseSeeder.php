@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductsSeeder::class);
         $this->call(LikesSeeder::class);
         $this->call(ProductVariationsSeeder::class);
-        $this->call(NotificationsSeeder::class);
+        // $this->call(NotificationsSeeder::class);
     }
 }

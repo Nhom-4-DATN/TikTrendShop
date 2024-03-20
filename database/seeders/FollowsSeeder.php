@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Stores;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -14,83 +16,75 @@ class FollowsSeeder extends Seeder
      */
     public function run(): void
     {
+        $user = User::all();
+        $store = Stores::all();
         DB::table('follows')->insert([
             [
-                'id' => 1,
-                'id_store' => 3,
-                'id_user' => 8,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 2,
-                'id_store' => 3,
-                'id_user' => 6,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 3,
-                'id_store' => 2,
-                'id_user' => 7,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 4,
-                'id_store' => 3,
-                'id_user' => 7,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 5,
-                'id_store' => 3,
-                'id_user' => 1,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 6,
-                'id_store' => 3,
-                'id_user' => 9,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 7,
-                'id_store' => 3,
-                'id_user' => 10,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 8,
-                'id_store' => 2,
-                'id_user' => 10,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 9,
-                'id_store' => 2,
-                'id_user' => 11,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null
             ],
             [
-                'id' => 10,
-                'id_store' => 3,
-                'id_user' => 11,
+                'id_store' => $store->random()->id,
+                'id_user' => $user->random()->id,
                 'is_follow' => true,
                 'created_at' => '2024-02-23 08:10:00',
                 'updated_at' => null

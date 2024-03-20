@@ -31,7 +31,7 @@
         </div>
     </div>
     <!-- loader wrapper -->
-    <div class="row feed-body container mx-auto ">
+    <div class="row feed-body">
         <div class="col-xl-8 col-xxl-9 col-lg-8">
             <div class="card w-100 shadow-none bg-transparent bg-transparent-card border-0 p-0 mb-0">
                 <div class="owl-carousel category-card owl-theme overflow-hidden nav-none d-flex flex-row">
