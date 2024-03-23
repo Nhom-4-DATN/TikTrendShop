@@ -89,3 +89,15 @@ Route::controller(ComponentController::class)->group(function () {
     Route::get('render-list-location', 'renderListLocation')->name('components.render-list-location');
     Route::get('render-form-location', 'renderFormLocation')->name('components.render-form-location');
 });
+
+//cart
+Route::get('/cart',[CartController::class, 'cart'])->name('cart');
+Route::post('/addcart',[CartController::class, 'addcart'])->name('addcart');
+Route::post('/delpro/{id_product}',[CartController::class, 'delpro'])->name('delpro');
+Route::post('/ma-giam-gia', [CartController::class, 'checkCoupon'])->name('checkCoupon');
+Route::post('/bo-ma-giam-gia', [CartController::class, 'remove'])->name('remove');
+Route::get('/gio-hang-trong',[CartController::class,'not']);
+
+//checkout
+Route::get('/checkout',[CartController::class,'checkout']);
+Route::post('/check',[CartController::class,'check']);
