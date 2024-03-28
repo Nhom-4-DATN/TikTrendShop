@@ -109,7 +109,7 @@
                                 </div> --}}
 
                     <div class="row">
-                        <div class="col-lg-12 mb-3">
+                        {{-- <div class="col-lg-12 mb-3">
                             <div class="card mt-3 border-0">
                                 <div class="card-body d-flex justify-content-between align-items-end p-0">
                                     <div class="form-group mb-0 w-100">
@@ -121,7 +121,53 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> --}}
+                        <div class="col-lg-12 mb-3">
+                            <div class="card mt-3 border-0">
+                                <div class="card-body d-flex justify-content-between align-items-end p-0">
+                                    <div class="form-group mb-0 w-100">
+                                        <input type="file" name="file" id="file" class="input-file" onchange="previewImage(event)">
+                                        <label for="file" class="rounded-3 text-center bg-white btn-tertiary js-labelFile p-4 w-100 border-dashed">
+                                            <i class="ti-cloud-down large-icon me-3 d-block"></i>
+                                            <span class="js-fileName">Kéo thả hoặc bấm vào để thay thế ảnh</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-center" id="imagePreview"></div> <!-- Nơi hiển thị ảnh -->
+                            </div>
                         </div>
+
+                        <style>
+                            #imagePreview img {
+                                max-width: 100%;
+                                max-height: 200px; /* Điều chỉnh độ cao tối đa của ảnh tại đây */
+                            }
+                        </style>
+
+                        <script>
+                            function previewImage(event) {
+                                var input = event.target;
+                                var reader = new FileReader();
+                                reader.onload = function () {
+                                    var dataURL = reader.result;
+                                    var imagePreview = document.getElementById('imagePreview');
+                                    var imageElement = '<div class="position-relative"><img src="' + dataURL + '" class="img-fluid">';
+                                    imageElement += '<button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2" onclick="deleteImage()">Xoá</button></div>';
+                                    imagePreview.innerHTML = imageElement;
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                            }
+
+                            function deleteImage() {
+                                var imagePreview = document.getElementById('imagePreview');
+                                imagePreview.innerHTML = ''; // Xóa nội dung của div hiển thị ảnh
+                                var fileInput = document.getElementById('file');
+                                fileInput.value = ''; // Xóa giá trị của input file
+                            }
+                        </script>
+
+
+
 
                         <div class="row">
                             <div class="col-lg-12">

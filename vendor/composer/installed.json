@@ -1444,17 +1444,17 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.47.0",
-            "version_normalized": "10.47.0.0",
+            "version": "v10.48.3",
+            "version_normalized": "10.48.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "fce29b8de62733cdecbe12e3bae801f83fff2ea4"
+                "reference": "5791c052b41c6b593556adc687076bfbdd13c501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/fce29b8de62733cdecbe12e3bae801f83fff2ea4",
-                "reference": "fce29b8de62733cdecbe12e3bae801f83fff2ea4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5791c052b41c6b593556adc687076bfbdd13c501",
+                "reference": "5791c052b41c6b593556adc687076bfbdd13c501",
                 "shasum": ""
             },
             "require": {
@@ -1502,6 +1502,7 @@
             "conflict": {
                 "carbonphp/carbon-doctrine-types": ">=3.0",
                 "doctrine/dbal": ">=4.0",
+                "mockery/mockery": "1.6.8",
                 "phpunit/phpunit": ">=11.0.0",
                 "tightenco/collect": "<5.5.33"
             },
@@ -1604,7 +1605,7 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
             },
-            "time": "2024-03-05T15:18:36+00:00",
+            "time": "2024-03-15T10:17:07+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1782,17 +1783,17 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.28.2",
-            "version_normalized": "1.28.2.0",
+            "version": "v1.29.0",
+            "version_normalized": "1.29.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "057777403b8ab79222dcc04983beaab10b6de6a0"
+                "reference": "e40cc7ffb5186c45698dbd47e9477e0e429396d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/057777403b8ab79222dcc04983beaab10b6de6a0",
-                "reference": "057777403b8ab79222dcc04983beaab10b6de6a0",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/e40cc7ffb5186c45698dbd47e9477e0e429396d0",
+                "reference": "e40cc7ffb5186c45698dbd47e9477e0e429396d0",
                 "shasum": ""
             },
             "require": {
@@ -1806,7 +1807,7 @@
                 "orchestra/testbench": "^7.0|^8.0|^9.0",
                 "phpstan/phpstan": "^1.10"
             },
-            "time": "2024-03-04T14:58:29+00:00",
+            "time": "2024-03-08T16:32:33+00:00",
             "bin": [
                 "bin/sail"
             ],
@@ -2307,17 +2308,17 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.25.0",
-            "version_normalized": "3.25.0.0",
+            "version": "3.25.1",
+            "version_normalized": "3.25.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99"
+                "reference": "abbd664eb4381102c559d358420989f835208f18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4c44347133618cccd9b3df1729647a1577b4ad99",
-                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/abbd664eb4381102c559d358420989f835208f18",
+                "reference": "abbd664eb4381102c559d358420989f835208f18",
                 "shasum": ""
             },
             "require": {
@@ -2350,7 +2351,7 @@
                 "phpunit/phpunit": "^9.5.11|^10.0",
                 "sabre/dav": "^4.6.0"
             },
-            "time": "2024-03-09T17:06:45+00:00",
+            "time": "2024-03-16T12:53:19+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2384,7 +2385,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.25.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.25.1"
             },
             "funding": [
                 {
@@ -2400,17 +2401,17 @@
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.23.1",
-            "version_normalized": "3.23.1.0",
+            "version": "3.25.1",
+            "version_normalized": "3.25.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00"
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/b884d2bf9b53bb4804a56d2df4902bb51e253f00",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/61a6a90d6e999e4ddd9ce5adb356de0939060b92",
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92",
                 "shasum": ""
             },
             "require": {
@@ -2419,7 +2420,7 @@
                 "league/mime-type-detection": "^1.0.0",
                 "php": "^8.0.2"
             },
-            "time": "2024-01-26T18:25:23+00:00",
+            "time": "2024-03-15T19:58:44+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2446,8 +2447,7 @@
                 "local"
             ],
             "support": {
-                "issues": "https://github.com/thephpleague/flysystem-local/issues",
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.1"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.25.1"
             },
             "funding": [
                 {
@@ -2522,8 +2522,8 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.6.7",
-            "version_normalized": "1.6.7.0",
+            "version": "1.6.9",
+            "version_normalized": "1.6.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
@@ -3411,8 +3411,8 @@
         },
         {
             "name": "php-flasher/flasher",
-            "version": "v1.15.11",
-            "version_normalized": "1.15.11.0",
+            "version": "v1.15.14",
+            "version_normalized": "1.15.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher.git",
@@ -3476,7 +3476,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher/tree/v1.15.11"
+                "source": "https://github.com/php-flasher/flasher/tree/v1.15.14"
             },
             "funding": [
                 {
@@ -3504,25 +3504,25 @@
         },
         {
             "name": "php-flasher/flasher-laravel",
-            "version": "v1.15.11",
-            "version_normalized": "1.15.11.0",
+            "version": "v1.15.14",
+            "version_normalized": "1.15.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-laravel.git",
-                "reference": "2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea"
+                "reference": "c2777483fd7074087c16f861ce2191a95088e7c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea",
-                "reference": "2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea",
+                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/c2777483fd7074087c16f861ce2191a95088e7c6",
+                "reference": "c2777483fd7074087c16f861ce2191a95088e7c6",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
                 "php": ">=5.3",
-                "php-flasher/flasher": "^1.15.9"
+                "php-flasher/flasher": "^1.15.14"
             },
-            "time": "2024-03-07T01:15:58+00:00",
+            "time": "2024-03-16T15:25:14+00:00",
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3578,7 +3578,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.11"
+                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.14"
             },
             "funding": [
                 {
@@ -3684,17 +3684,17 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.1.13",
-            "version_normalized": "10.1.13.0",
+            "version": "10.1.14",
+            "version_normalized": "10.1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d51c3aec14896d5e80b354fad58e998d1980f8f8"
+                "reference": "e3f51450ebffe8e0efdf7346ae966a656f7d5e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d51c3aec14896d5e80b354fad58e998d1980f8f8",
-                "reference": "d51c3aec14896d5e80b354fad58e998d1980f8f8",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/e3f51450ebffe8e0efdf7346ae966a656f7d5e5b",
+                "reference": "e3f51450ebffe8e0efdf7346ae966a656f7d5e5b",
                 "shasum": ""
             },
             "require": {
@@ -3719,7 +3719,7 @@
                 "ext-pcov": "PHP extension that provides line coverage",
                 "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
             },
-            "time": "2024-03-09T16:54:15+00:00",
+            "time": "2024-03-12T15:33:41+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3753,7 +3753,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.13"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.14"
             },
             "funding": [
                 {
@@ -4020,17 +4020,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.12",
-            "version_normalized": "10.5.12.0",
+            "version": "10.5.13",
+            "version_normalized": "10.5.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "41a9886b85ac7bf3929853baf96b95361cd69d2b"
+                "reference": "20a63fc1c6db29b15da3bd02d4b6cf59900088a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/41a9886b85ac7bf3929853baf96b95361cd69d2b",
-                "reference": "41a9886b85ac7bf3929853baf96b95361cd69d2b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/20a63fc1c6db29b15da3bd02d4b6cf59900088a7",
+                "reference": "20a63fc1c6db29b15da3bd02d4b6cf59900088a7",
                 "shasum": ""
             },
             "require": {
@@ -4064,7 +4064,7 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
-            "time": "2024-03-09T12:04:07+00:00",
+            "time": "2024-03-12T15:37:41+00:00",
             "bin": [
                 "phpunit"
             ],
@@ -4104,7 +4104,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.12"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.13"
             },
             "funding": [
                 {
@@ -4560,17 +4560,17 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.0",
-            "version_normalized": "0.12.0.0",
+            "version": "v0.12.2",
+            "version_normalized": "0.12.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "750bf031a48fd07c673dbe3f11f72362ea306d0d"
+                "reference": "9185c66c2165bbf4d71de78a69dccf4974f9538d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/750bf031a48fd07c673dbe3f11f72362ea306d0d",
-                "reference": "750bf031a48fd07c673dbe3f11f72362ea306d0d",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/9185c66c2165bbf4d71de78a69dccf4974f9538d",
+                "reference": "9185c66c2165bbf4d71de78a69dccf4974f9538d",
                 "shasum": ""
             },
             "require": {
@@ -4592,7 +4592,7 @@
                 "ext-pdo-sqlite": "The doc command requires SQLite to work.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
-            "time": "2023-12-20T15:28:09+00:00",
+            "time": "2024-03-17T01:53:00+00:00",
             "bin": [
                 "bin/psysh"
             ],
@@ -4636,7 +4636,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.0"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.2"
             },
             "install-path": "../psy/psysh"
         },
@@ -9059,24 +9059,24 @@
         },
         {
             "name": "yoeunes/toastr",
-            "version": "v2.3.2",
-            "version_normalized": "2.3.2.0",
+            "version": "v2.3.5",
+            "version_normalized": "2.3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yoeunes/toastr.git",
-                "reference": "e4ef0553cf5826981aa1eb69725a50a114c3a14f"
+                "reference": "5c39d42b4c7b110572b7643bba1cd51b8af89b74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yoeunes/toastr/zipball/e4ef0553cf5826981aa1eb69725a50a114c3a14f",
-                "reference": "e4ef0553cf5826981aa1eb69725a50a114c3a14f",
+                "url": "https://api.github.com/repos/yoeunes/toastr/zipball/5c39d42b4c7b110572b7643bba1cd51b8af89b74",
+                "reference": "5c39d42b4c7b110572b7643bba1cd51b8af89b74",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
-                "php-flasher/flasher-laravel": "^1.15.11"
+                "php-flasher/flasher-laravel": "^1.15.14"
             },
-            "time": "2024-03-07T01:31:46+00:00",
+            "time": "2024-03-16T15:29:23+00:00",
             "type": "library",
             "extra": {
                 "laravel": {

@@ -7564,7 +7564,8 @@ fieldset:disabled .btn {
 }
 
 .modal-backdrop.show {
-    opacity: .5
+    opacity: .5;
+    display: none;
 }
 
 .modal-header {
@@ -13500,7 +13501,7 @@ strong {
     line-height: 90px;
     width: 280px;
     text-align: left;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

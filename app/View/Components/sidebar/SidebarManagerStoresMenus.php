@@ -78,7 +78,7 @@ class SidebarManagerStoresMenus extends Component
                         'url' => Route('manager.blog.index'),
                     ],
                     [
-                        'title' => 'tạo bài đăng',
+                        'title' => 'Tạo bài đăng',
                         'icon' => '',
                         'url' => Route('manager.blog.create'),
                     ],
@@ -108,7 +108,7 @@ class SidebarManagerStoresMenus extends Component
                 ]
             ],
             [
-                'id' => 6,
+                'id' => 5,
                 'title' => 'thiết lập',
                 'icon' => '',
                 'url' => '',
@@ -122,6 +122,24 @@ class SidebarManagerStoresMenus extends Component
                         'title' => 'đơn hàng đã hủy',
                         'icon' => '',
                         'url' => '',
+                    ]
+                ]
+            ],
+            [
+                'id' => 5,
+                'title' => 'Giao hàng',
+                'icon' => '',
+                'url' => '',
+                'children' => [
+                    [
+                        'title' => 'Đơn hàng',
+                        'icon' => '',
+                        'url' => route('order.manager.list'),
+                    ],
+                    [
+                        'title' => 'Cập nhập Giao hàng',
+                        'icon' => '',
+                        'url' => route('order.manager.delivery'),
                     ]
                 ]
             ],

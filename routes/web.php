@@ -13,6 +13,8 @@ use App\Http\Controllers\StoresController;
 
 use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CommentBlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,13 +51,6 @@ Route::prefix('category')->group(base_path('routes/routesGroup/category.php'));
 Route::prefix('location')->group(base_path('routes/routesGroup/address.php'));
 Route::prefix('order')->group(base_path('routes/routesGroup/order.php'));
 
-
-
-
-
-
-
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::auth();
 
@@ -75,11 +70,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/product-details/{id}-{name_product}', [ProductsController::class, 'productDetails'])->name('productDetails');
     Route::get('/search', [ProductsController::class, 'search'])->name('search');
     Route::post('/products/{id_product}/{name_product}/comment', [CommentController::class, 'comment'])->name('product.comment');
+    //blog
+    Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
 });
-
-
-
-
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
@@ -89,3 +82,7 @@ Route::controller(ComponentController::class)->group(function () {
     Route::get('render-list-location', 'renderListLocation')->name('components.render-list-location');
     Route::get('render-form-location', 'renderFormLocation')->name('components.render-form-location');
 });
+// đường dẫ khác sẽ chuyển về trang chủ
+Route::get('/{any}', function () {
+    return redirect('/');
+})->where('any', '.*');

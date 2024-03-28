@@ -19,6 +19,10 @@ class BlogController extends Controller
         $this->blogService = new BlogRepository();
         $this->blogModal = new Blog();
     }
+    function blog()
+    {
+        return view('site.components.user.blog');
+    }
     function manageBlog()
     {
         try {

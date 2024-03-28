@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feather.css') }}">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/emoji.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/emoji.css') }}">
 
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
     <title>@yield('title')</title>
+    {{-- fontAwesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
@@ -28,8 +30,8 @@
         <!-- navigation top-->
         <div class="nav-header bg-white shadow-xs border-0">
             <div class="nav-top">
-                <a href="index.html"><i class="feather-zap text-success display1-size me-2 ms-0"></i><span
-                        class="d-inline-block fredoka-font ls-3 fw-600 text-current font-xxl logo-text mb-0">Sociala.
+                <a href="{{ route('home') }}"><i class="feather-zap text-success display1-size me-2 ms-0"></i><span
+                        class="d-inline-block fredoka-font ls-3 fw-600 text-current font-xxl logo-text mb-0">TikTrendShop.
                     </span> </a>
                 <a href="#" class="mob-menu ms-auto me-2 chat-active-btn"><i
                         class="feather-message-circle text-grey-900 font-sm btn-round-md bg-greylight"></i></a>
@@ -59,8 +61,8 @@
                     class="feather-shopping-bag font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i></a>
 
             <a href="#" class="p-2 text-center ms-auto menu-icon" id="dropdownMenu3" data-bs-toggle="dropdown"
-                aria-expanded="false"><span class="dot-count bg-warning"></span><i
-                    class="feather-bell font-xl text-current"></i></a>
+                aria-expanded="false"><span class="dot-count bg-warning"></span>
+                <i class="feather-bell font-xl text-current"></i></a>
             <div class="dropdown-menu dropdown-menu-end p-4 rounded-3 border-0 shadow-lg"
                 aria-labelledby="dropdownMenu3">
 
@@ -202,8 +204,10 @@
             </div>
 
 
-            <a href="default-settings.html" class="p-0 ms-3 menu-icon"><img src="images/profile-4.png"
-                    alt="user" class="w40 mt--1"></a>
+            <a href="{{ route('default') }}" class="p-0 ms-3 menu-icon">
+                {{-- <img src="{{ asset('/storage/images/account/avatar.jpg') }}" alt="user" class="w40 mt--1"> --}}
+                <i class="feather-user font-xl text-current"></i>
+            </a>
 
         </div>
 
@@ -212,58 +216,61 @@
             <div class="container ps-0 pe-0">
                 <div class="nav-content">
                     <div class="nav-wrap bg-white bg-transparent-card rounded-xxl shadow-xss pt-3 pb-1 mb-2 mt-2">
-                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span>New </span>Feeds</div>
+                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span>Cửa hàng </span></div>
                         <ul class="mb-1 top-content">
                             <li class="logo d-none d-xl-block d-lg-block"></li>
-                            <li><a href="default.html" class="nav-content-bttn open-font"><i
-                                        class="feather-tv btn-round-md bg-blue-gradiant me-3"></i><span>Newsfeed</span></a>
+                            <li><a href="{{ route('blog') }}" class="nav-content-bttn open-font"><i
+                                        class="feather-tv btn-round-md bg-blue-gradiant me-3"></i><span>Bài
+                                        viết</span></a>
                             </li>
-                            <li><a href="default-badge.html" class="nav-content-bttn open-font"><i
+                            {{-- <li><a href="default-badge.html" class="nav-content-bttn open-font"><i
                                         class="feather-award btn-round-md bg-red-gradiant me-3"></i><span>Badges</span></a>
                             </li>
                             <li><a href="default-storie.html" class="nav-content-bttn open-font"><i
                                         class="feather-globe btn-round-md bg-gold-gradiant me-3"></i><span>Explore
-                                        Stories</span></a></li>
-                            <li><a href="default-group.html" class="nav-content-bttn open-font"><i
-                                        class="feather-zap btn-round-md bg-mini-gradiant me-3"></i><span>Popular
-                                        Groups</span></a></li>
-                            <li><a href="user-page.html" class="nav-content-bttn open-font"><i
-                                        class="feather-user btn-round-md bg-primary-gradiant me-3"></i><span>Author
-                                        Profile </span></a></li>
+                                        Stories</span></a></li> --}}
+                            <li><a href="{{ route('home') }}" class="nav-content-bttn open-font"><i
+                                        class="feather-zap btn-round-md bg-mini-gradiant me-3"></i><span>Shop nổi
+                                        bật</span></a></li>
+                            <li><a href="{{ route('register.shop') }}" class="nav-content-bttn open-font"><i
+                                        class="feather-user btn-round-md bg-primary-gradiant me-3"></i><span>Đăng ký
+                                        cửa hàng</span></a></li>
                         </ul>
                     </div>
 
                     <div class="nav-wrap bg-white bg-transparent-card rounded-xxl shadow-xss pt-3 pb-1 mb-2">
-                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span>More </span>Pages</div>
+                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span>Trang</span></div>
                         <ul class="mb-3">
-                            <li><a href="default-email-box.html" class="nav-content-bttn open-font"><i
+                            {{-- <li><a href="default-email-box.html" class="nav-content-bttn open-font"><i
                                         class="font-xl text-current feather-inbox me-3"></i><span>Email Box</span><span
-                                        class="circle-count bg-warning mt-1">584</span></a></li>
-                            <li><a href="default-hotel.html" class="nav-content-bttn open-font"><i
-                                        class="font-xl text-current feather-home me-3"></i><span>Near Hotel</span></a>
+                                        class="circle-count bg-warning mt-1">584</span></a></li> --}}
+                            <li><a href="{{ route('home') }}" class="nav-content-bttn open-font"><i
+                                        class="font-xl text-current feather-home me-3"></i><span>Trang chủ</span></a>
                             </li>
-                            <li><a href="default-event.html" class="nav-content-bttn open-font"><i
+                            {{-- <li><a href="default-event.html" class="nav-content-bttn open-font"><i
                                         class="font-xl text-current feather-map-pin me-3"></i><span>Latest
                                         Event</span></a></li>
                             <li><a href="default-live-stream.html" class="nav-content-bttn open-font"><i
                                         class="font-xl text-current feather-youtube me-3"></i><span>Live
-                                        Stream</span></a></li>
+                                        Stream</span></a></li> --}}
                         </ul>
                     </div>
                     <div class="nav-wrap bg-white bg-transparent-card rounded-xxl shadow-xss pt-3 pb-1">
-                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span></span> Account</div>
+                        <div class="nav-caption fw-600 font-xssss text-grey-500"><span></span> Tài khoản</div>
                         <ul class="mb-1">
                             <li class="logo d-none d-xl-block d-lg-block"></li>
-                            <li><a href="default-settings.html" class="nav-content-bttn open-font h-auto pt-2 pb-2"><i
-                                        class="font-sm feather-settings me-3 text-grey-500"></i><span>Settings</span></a>
+                            <li><a href="{{ route('default') }}"
+                                    class="nav-content-bttn open-font h-auto pt-2 pb-2"><i
+                                        class="font-sm feather-settings me-3 text-grey-500"></i><span>Cài
+                                        đặt</span></a>
                             </li>
-                            <li><a href="default-analytics.html"
+                            {{-- <li><a href="default-analytics.html"
                                     class="nav-content-bttn open-font h-auto pt-2 pb-2"><i
                                         class="font-sm feather-pie-chart me-3 text-grey-500"></i><span>Analytics</span></a>
                             </li>
                             <li><a href="default-message.html" class="nav-content-bttn open-font h-auto pt-2 pb-2"><i
                                         class="font-sm feather-message-square me-3 text-grey-500"></i><span>Chat</span><span
-                                        class="circle-count bg-warning mt-0">23</span></a></li>
+                                        class="circle-count bg-warning mt-0">23</span></a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -585,9 +592,9 @@
         </div>
     </div>
 
-    <script src="js/plugin.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="{{ asset('js/plugin.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/lightbox.js') }}"></script>
 
 
 </body>

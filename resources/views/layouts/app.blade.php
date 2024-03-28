@@ -35,7 +35,7 @@
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Tài khoản</a></li>
                                             <li><a class="dropdown-item" href="#">Cửa hàng</a></li>
-                                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                            <li><a class="dropdown-item" href="{{route('shop.logout')}}">Đăng xuất</a></li>
                                         </ul>
                                     </div>
                                 </li>

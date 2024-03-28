@@ -4,6 +4,8 @@ import toastr from 'toastr';
 const modalLocation = new Modal('#modal-location');
 const modalMessage = new Modal(idModalMessage);
 
+
+
 $('#modal-location .btn-submit-form').click(function(e) {
     const form = $( "#"+ $(this).attr('data-for'));
     const data = form.serialize();
@@ -62,7 +64,7 @@ modalMessage._element.addEventListener('show.bs.modal', function (e){
     if(url){
         document.querySelector('.btn-url').setAttribute('data-url' , url) ;
     }
-}); 
+});
 
 modalMessage._element.addEventListener('show.bs.modal', function (e){
     const url = e.relatedTarget?.dataset.url;

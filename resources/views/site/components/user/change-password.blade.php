@@ -29,7 +29,7 @@
                                         id="currentPassword">
                                     <span class="input-group-text" id="toggleCurrentPassword"
                                         onclick="togglePassword('currentPassword', 'eyeIconCurrentPassword')">
-                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fas fa-eye"></i>
                                     </span>
                                 </div>
                                 @if ($errors->has('current_password'))
@@ -66,7 +66,7 @@
                                         id="confirmPassword">
                                     <span class="input-group-text" id="toggleConfirmPassword"
                                         onclick="togglePassword('confirmPassword', 'eyeIconConfirmPassword')">
-                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fas fa-eye"></i>
                                     </span>
                                 </div>
                                 @if ($errors->has('confirm_password'))
@@ -92,7 +92,7 @@
                             passwordInput.setAttribute('type', type);
 
                             // Chuyển đổi biểu tượng con mắt giữa mở và đóng
-                            eyeIcon.innerHTML = type === 'password' ? '<i class="fa-solid fa-eye"></i>' :
+                            eyeIcon.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' :
                                 '<i class="fa-solid fa-eye-slash"></i>';
                         }
                     </script>
